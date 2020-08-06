@@ -1,0 +1,90 @@
+// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-footer {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background-color: #080103;
+  color: #fff;
+
+  &__top {
+    padding: 60px 0;
+    display: flex;
+
+    @media (min-width: $screen-xxl) {
+      padding: 60px 10%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer-logo {
+      margin-right: 8%;
+      max-width: 220px;
+      .logo {
+        margin-bottom: 15px;
+      }
+    }
+    .footer-links {
+      flex-grow: 1;
+      @include row;
+
+      &__part {
+        @include col();
+        @include col(lg, 4);
+
+        &:last-child {
+          margin-top: 60px;
+        }
+      }
+
+      &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 5px;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            color: $color-main;
+          }
+        }
+      }
+    }
+  }
+
+  &__caption {
+    flex-basis: 100%;
+  }
+  &__contacts {
+
+  }
+
+  &__bottom {
+    padding: 20px 0;
+    border-top: 2px solid rgba(#fff, 0.2);
+  }
+}
+
+
+// добавочные для футера (разбить на отдельные блоки)
+
+.footer-contacts {
+  &__phone {
+    font-weight: bold;
+    line-height: 1;
+    font-size: 26px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
