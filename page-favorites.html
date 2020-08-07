@@ -1,0 +1,331 @@
+<!DOCTYPE html><html class="no-js  page" lang="ru"><head>  <meta charset="utf-8">  <title>АртАри</title>  <meta name="description" content>  <!--DEV Такой комментарий не попадет в собранный HTML
+  <meta name="viewport" content="width=1000">
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head><body>  <div class="page__inner">    <div class="page__content">      <!--DEV
+      Нужно убрать пробел между @-ами:
+      @ @include('blocks/page-header/page-header.html')
+      -->
+      <header class="page-header" role="banner">
+        <nav id="main-nav" class="main-nav" role="navigation">
+          <div class="container">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Акции
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Оплата
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Пункт выдачи
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Гарантия
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  О компании
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Дилерам
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button> -->
+        </nav>
+        <div class="page-header__wrap">
+          <div class="container">
+            <div class="page-header__inner">
+              <a href="index.html" class="logo">
+                <img src="img/logo-dark.png" alt="logo">
+              </a>
+              <div class="page-header__search">
+                <div class="call-phone"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-tel"/></svg>8 (495) 204-13-22</div>
+                <form action class="search">
+                  <input class="search__input" type="search">
+                  <button class="search__btn"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-search"/></svg></button>
+                </form>
+                <a href="#" class="call-link">Заказать обратный звонок</a>
+              </div>
+              <div class="page-header__schedule">
+                <span>График работы: 9:00-21:00</span>
+                <span>без перерыва и выходных</span>
+              </div>
+              <div class="page-header__user">
+                <a href="#" class="btn">
+                  <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-weigher"/></svg>
+                  <div>
+                    <div>Сравнение</div>
+                    <div>0 товаров</div>
+                  </div>
+                </a>
+                <a href="#" class="btn">
+                  <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-weigher"/></svg>
+                  <div>
+                    <div>Избранное</div>
+                    <div>0 товаров</div>
+                  </div>
+                </a>
+                <a href="#" class="btn">
+                  <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-weigher"/></svg>
+                  <div>
+                    <div>Корзина</div>
+                    <div>0 товаров</div>
+                  </div>
+                </a>
+              </div>
+              <a href="#" class="page-header__delivery">
+                <img src="img/delivery-img.png" alt>
+                <span>Доставка бесплатно</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav id="catalog-nav" class="catalog-nav" role="navigation">
+          <div class="container">
+            <ul class="catalog-nav__list">
+              <li class="catalog-nav__item">
+                <a href="#" class="catalog-nav__link">
+                  <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-velo"/></svg>
+                  Велосипеды
+                </a>
+              </li>
+              <li class="catalog-nav__item">
+                <a href="#" class="catalog-nav__link">
+                  <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-samokat"/></svg>
+                  Самокаты
+                </a>
+              </li>
+              <li class="catalog-nav__item">
+                <a href="#" class="catalog-nav__link">
+                  <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-accessory"/></svg>
+                  Аксессуары
+                </a>
+              </li>
+              <li class="catalog-nav__item">
+                <a href="#" class="catalog-nav__link">
+                  <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-spares"/></svg>
+                  Запчасти
+                </a>
+              </li>
+              <li class="catalog-nav__item">
+                <a href="#" class="catalog-nav__link">
+                  <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-garment"/></svg>
+                  Одежда
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main role="main">        <section class="sidebar-layout">          <div class="container">            <!--DEV
+            Для использования этого файла как шаблона:
+            @ @include('blocks/breadcrumbs/breadcrumbs.html')
+            (Нужно убрать пробел между символами @)
+            Подробнее: https://www.npmjs.com/package/gulp-file-include
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог</a></li>
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Маркеры</a></li>
+            </ul>
+            -->
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Каталог</a></li>
+              <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Маркеры</a></li>
+            </ul>
+            <div class="sidebar-layout__inner">              <div class="sidebar-layout__col-sedebar">                <!--DEV
+                Для использования этого файла как шаблона:
+                @ @include('blocks/filter/filter.html')
+                (Нужно убрать пробел между символами @)
+                Подробнее: https://www.npmjs.com/package/gulp-file-include
+                -->
+                <form action class="filter">
+                  <div class="filter__inner">
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Цена</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Марки</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Тип</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Подтип</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Год</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Диаметр колеса</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Рост</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Цвет</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                    <div class="filter__part">
+                      <div class="filter__head">
+                        <a class="filter__name" href="#">Опции</a>
+                      </div>
+                      <div class="filter__body">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__action">
+                    <div class="btn btn--main">применить</div>
+                  </div>
+                </form>              </div>              <div class="sidebar-layout__col-main">                <h1>Избранное</h1>              </div>            </div>          </div>        </section>        <section class="section">          <div class="container">            <div class="section__head">              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>            </div>            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России.             Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность             и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться             среди 365 представленных брендов и 30 000 товаров.</p>            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства             регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры             и ресторан альпийской кухни «Шале».</p>          </div>        </section>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV
+      Нужно убрать пробел между @-ами:
+      @ @include('blocks/page-footer/page-footer.html')
+      -->
+      <footer class="page-footer" role="contentinfo">
+        <div class="container">
+          <div class="page-footer__inner">
+            <div class="page-footer__top">
+              <div class="page-footer__info">
+                <div class="footer-logo">
+                  <a href="index.html" class="logo">
+                    <img src="img/logo-white.png" alt="logo">
+                  </a>
+                  <p>График работы магазина: <br>9:00 - 21:00</p>
+                </div>
+                <div class="footer-links">
+                  <div class="footer-links__part">
+                    <h3 class="footer-title">Каталог товаров</h3>
+                    <ul class="footer-links__list">
+                      <li><a href="#">Велосипеды</a></li>
+                      <li><a href="#">Аксессуары</a></li>
+                      <li><a href="#">Запчасти</a></li>
+                      <li><a href="#">Самокаты</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-links__part">
+                    <h3 class="footer-title">Компания</h3>
+                    <ul class="footer-links__list">
+                      <li><a href="#">О компании</a></li>
+                      <li><a href="#">Доставка и оплата</a></li>
+                      <li><a href="#">Сервис и гарантия</a></li>
+                      <li><a href="#">Акция</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-links__part">
+                    <ul class="footer-links__list">
+                      <li><a href="#">Бренды</a></li>
+                      <li><a href="#">Новости</a></li>
+                      <li><a href="#">Партнерам</a></li>
+                      <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-caption">
+                  <p>Интернет-магазин велосипедов - велосипеды с доставкой по Москве и России.</p>
+                  <p>Каталог велосипедов: Электровелосипеды, горные велосипеды, детские велосипеды, складные велосипеды, шоссейные велосипеды, городские велосипеды, велосипеды Merida, велосипеды Haidbike</p>
+                </div>
+              </div>
+              <div class="page-footer__contacts">
+                <h3 class="footer-title">Контакты</h3>
+                <div class="footer-contacts">
+                  <span class="footer-contacts__phone">8 (495) 204-13-22</span>
+                  <a href="#" class="btn btn--main">Обратный звонок</a>
+                  <div class="social"></div>
+                </div>
+              </div>
+            </div>
+            <div class="page-footer__bottom">
+              <span class="copyright-text">&copy; Copyright 2011-2020 интернет магазин велосипедов <span>Артари</span></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+  -->
+  <script src="js/script.min.js"></script>
+</body></html>

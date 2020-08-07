@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html class="no-js  page" lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>АртАри</title>
-  <meta name="description" content>
+<!DOCTYPE html><html class="no-js  page" lang="ru"><head>  <meta charset="utf-8">  <title>АртАри</title>  <meta name="description" content>  <!--DEV Такой комментарий не попадет в собранный HTML
+  <meta name="viewport" content="width=1000">
+  -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link href="css/style.min.css" rel="stylesheet" media="screen">
@@ -40,10 +37,10 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head>
-<body>
-  <div class="page__inner">
-    <div class="page__content">
+<meta name="theme-color" content="#ffffff"></head><body>  <div class="page__inner">    <div class="page__content">      <!--DEV
+      Нужно убрать пробел между @-ами:
+      @ @include('blocks/page-header/page-header.html')
+      -->
       <header class="page-header" role="banner">
         <nav id="main-nav" class="main-nav" role="navigation">
           <div class="container">
@@ -172,168 +169,13 @@
           </div>
         </nav>
       </header>
-      <main role="main">
-        <section class="section">
-          <div class="container">
-            <div id="owl-carousel-demo" class="owl-carousel">
-              <a href="#" class="category-card">
-                <div class="category-card__img-wrap">
-                  <img src="img/category-img-01.png" alt class="category-card__img">
-                  <div class="category-card__reserve">35 в наличии</div>
-                </div>
-                <div class="category-card__title">Горные</div>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-card__img-wrap">
-                  <img src="img/category-img-02.png" alt class="category-card__img">
-                  <div class="category-card__reserve">35 в наличии</div>
-                </div>
-                <div class="category-card__title">Городские</div>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-card__img-wrap">
-                  <img src="img/category-img-03.png" alt class="category-card__img">
-                  <div class="category-card__reserve">35 в наличии</div>
-                </div>
-                <div class="category-card__title">Подрастковые</div>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-card__img-wrap">
-                  <img src="img/category-img-04.png" alt class="category-card__img">
-                  <div class="category-card__reserve">35 в наличии</div>
-                </div>
-                <div class="category-card__title">Фэтбайки</div>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-card__img-wrap">
-                  <img src="img/category-img-05.png" alt class="category-card__img">
-                  <div class="category-card__reserve">35 в наличии</div>
-                </div>
-                <div class="category-card__title">Детские</div>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-card__img-wrap">
-                  <img src="img/category-img-06.png" alt class="category-card__img">
-                  <div class="category-card__reserve">35 в наличии</div>
-                </div>
-                <div class="category-card__title">Беговелы</div>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-card__img-wrap">
-                  <img src="img/category-img-07.png" alt class="category-card__img">
-                  <div class="category-card__reserve">35 в наличии</div>
-                </div>
-                <div class="category-card__title">Скидки</div>
-              </a>
-            </div>
-          </div>
-        </section>
-        <section class="section section-line-decor">
-          <div class="container">
-            <div class="consultant">
-              <div class="consultant__inner">
-                <div class="consultant__part-video">
-                  <div class="embed-responsive  embed-responsive--16-9">
-                    <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="consultant__part-form">
-                  <form action class="consultant__form-wrap">
-                    <div class="consultant__form-col">
-                      <label class="field-text">
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="Вид товара" id name>
-                        </span>
-                      </label>
-                      <label class="field-text">
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="Пол" id name>
-                        </span>
-                      </label>
-                      <label class="field-text">
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="Рост" id name>
-                        </span>
-                      </label>
-                    </div>
-                    <div class="consultant__form-col">
-                      <div class="consultant-card">
-                        <div class="consultant-card__title">Онлайн консультант</div>
-                        <div class="consultant-card__img-wrap">
-                          <img src="img/consultant-img.jpg" alt class="consultant-card__img">
-                        </div>
-                        <div class="consultant-card__head">
-                          <div class="consultant-card__name">Андрей Комаров</div>
-                          <div class="consultant-card__post">Специалист по подбору</div>
-                        </div>
-                        <div class="consultant-card__action">
-                          <div class="field-checkbox">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox" id name checked>
-                              <span class="field-checkbox__name-text">Текст у флажка</span>
-                            </label>
-                          </div>
-                          <a href="#" class="btn btn--main">Помощь</a>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section">
-          <div class="container">
-            <div class="section__head">
-              <h2 class="section__title light center">Аксессуары</h2>
-            </div>
-            <div id="owl-carousel-demo-2" class="owl-carousel">
-              <div class="dop-card">
-                <div class="dop-card__img-wrap">
-                  <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
-                </div>
-                <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
-                <div class="dop-card__action">
-                  <a href="#" class="btn btn--red-outline dop-card__btn">5 390 ₽</a>
-                </div>
-              </div>
-              <div class="dop-card">
-                <div class="dop-card__img-wrap">
-                  <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
-                </div>
-                <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
-                <div class="dop-card__action">
-                  <a href="#" class="btn btn--red-outline dop-card__btn">5 390 ₽</a>
-                </div>
-              </div>
-              <div class="dop-card">
-                <div class="dop-card__img-wrap">
-                  <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
-                </div>
-                <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
-                <div class="dop-card__action">
-                  <a href="#" class="btn btn--red-outline dop-card__btn">5 390 ₽</a>
-                </div>
-              </div>
-              <div class="dop-card">
-                <div class="dop-card__img-wrap">
-                  <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
-                </div>
-                <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
-                <div class="dop-card__action">
-                  <a href="#" class="btn btn--red-outline dop-card__btn">5 390 ₽</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section">
-          <div class="container">
-            <div class="section__head">
-              <h2 class="section__title">Распродажа велосипедов 2019</h2>
-            </div>
-            <div id="owl-carousel-demo-3" class="owl-carousel">
+      <main role="main">        <section class="section">          <div class="container">            <div class="section__head">              <h2 class="section__title light">Похожие модели</h2>            </div>            <div id="owl-carousel-demo-3" class="owl-carousel">              <!--DEV
+              Для использования этого файла как шаблона:
+              @ @include('blocks/product-card/product-card.html')
+              (Нужно убрать пробел между символами @)
+              Подробнее: https://www.npmjs.com/package/gulp-file-include
+              <div class="product-card">content</div>
+              -->
               <div class="product-card">
                 <div class="product-card__img-wrap">
                   <div class="label-in-stock 125 47">
@@ -369,7 +211,13 @@
                     <li>Артикул: 1117193</li>
                   </ul>
                 </div>
-              </div>
+              </div>              <!--DEV
+              Для использования этого файла как шаблона:
+              @ @include('blocks/product-card/product-card.html')
+              (Нужно убрать пробел между символами @)
+              Подробнее: https://www.npmjs.com/package/gulp-file-include
+              <div class="product-card">content</div>
+              -->
               <div class="product-card">
                 <div class="product-card__img-wrap">
                   <div class="label-in-stock 125 47">
@@ -405,7 +253,13 @@
                     <li>Артикул: 1117193</li>
                   </ul>
                 </div>
-              </div>
+              </div>              <!--DEV
+              Для использования этого файла как шаблона:
+              @ @include('blocks/product-card/product-card.html')
+              (Нужно убрать пробел между символами @)
+              Подробнее: https://www.npmjs.com/package/gulp-file-include
+              <div class="product-card">content</div>
+              -->
               <div class="product-card">
                 <div class="product-card__img-wrap">
                   <div class="label-in-stock 125 47">
@@ -441,7 +295,13 @@
                     <li>Артикул: 1117193</li>
                   </ul>
                 </div>
-              </div>
+              </div>              <!--DEV
+              Для использования этого файла как шаблона:
+              @ @include('blocks/product-card/product-card.html')
+              (Нужно убрать пробел между символами @)
+              Подробнее: https://www.npmjs.com/package/gulp-file-include
+              <div class="product-card">content</div>
+              -->
               <div class="product-card">
                 <div class="product-card__img-wrap">
                   <div class="label-in-stock 125 47">
@@ -477,29 +337,10 @@
                     <li>Артикул: 1117193</li>
                   </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section">
-          <div class="container">
-            <div class="section__head">
-              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>
-            </div>
-            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России. 
-            Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>
-            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность 
-            и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться 
-            среди 365 представленных брендов и 30 000 товаров.</p>
-            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства 
-            регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>
-            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры 
-            и ресторан альпийской кухни «Шале».</p>
-          </div>
-        </section>
-      </main>
-    </div>
-    <div class="page__footer-wrapper">
+              </div>            </div>          </div>        </section>        <section class="section">          <div class="container">            <div class="section__head">              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>            </div>            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России.             Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность             и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться             среди 365 представленных брендов и 30 000 товаров.</p>            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства             регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры             и ресторан альпийской кухни «Шале».</p>          </div>        </section>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV
+      Нужно убрать пробел между @-ами:
+      @ @include('blocks/page-footer/page-footer.html')
+      -->
       <footer class="page-footer" role="contentinfo">
         <div class="container">
           <div class="page-footer__inner">
@@ -559,8 +400,9 @@
           </div>
         </div>
       </footer>
-    </div>
-  </div>
+    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+  -->
   <script src="js/script.min.js"></script>
-</body>
-</html>
+</body></html>
