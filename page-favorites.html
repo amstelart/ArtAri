@@ -260,7 +260,91 @@
                   <div class="filter__action">
                     <div class="btn btn--main">применить</div>
                   </div>
-                </form>              </div>              <div class="sidebar-layout__col-main">                <h1>Избранное</h1>              </div>            </div>          </div>        </section>        <section class="section">          <div class="container">            <div class="section__head">              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>            </div>            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России.             Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность             и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться             среди 365 представленных брендов и 30 000 товаров.</p>            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства             регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры             и ресторан альпийской кухни «Шале».</p>          </div>        </section>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV
+                </form>              </div>              <div class="sidebar-layout__col-main">                <h1>Избранное</h1>                <div class="catalog">                  <div class="sorting">                    <div class="sorting__part">                      <div class="sorting-view">Отображать</div>                    </div>                    <form action class="sorting__part">                      <div class="field-checkbox">                        <div class="field-checkbox__input-wrap">                          <label class="field-checkbox__name">                            <input class="field-checkbox__input" type="checkbox" id name>                            <span class="field-checkbox__name-text">В наличии</span>                          </label>                        </div>                        <div class="field-checkbox__input-wrap">                          <label class="field-checkbox__name">                            <input class="field-checkbox__input" type="checkbox" id name>                            <span class="field-checkbox__name-text">Со скидкой</span>                          </label>                        </div>                      </div>                    </form>                    <form action class="sorting__part">                      Выводить по:                      <label class="field-select">                        <div class="field-select__select-wrap">                          <select class="field-select__select" id name>                            <option>Значение 1</option>                            <option>Значение 2</option>                            <option>Значение 3</option>                          </select>                        </div>                      </label>                      <label class="field-select">                        <div class="field-select__select-wrap">                          <select class="field-select__select" id name>                            <option>Значение 1</option>                            <option>Значение 2</option>                            <option>Значение 3</option>                          </select>                        </div>                      </label>                    </form>                  </div>                  <div class="catalog__list">                    <div class="catalog__item">                      <!--DEV
+                      Для использования этого файла как шаблона:
+                      @ @include('blocks/product-card/product-card.html')
+                      (Нужно убрать пробел между символами @)
+                      Подробнее: https://www.npmjs.com/package/gulp-file-include
+                      <div class="product-card">content</div>
+                      -->
+                      <div class="product-card">
+                        <div class="product-card__img-wrap">
+                          <div class="label-in-stock 125 47">
+                          </div>
+                          <div class="label-sale">
+                          </div>
+                          <img src="img/product-img-350_227.png" alt class="product-card__img">
+                        </div>
+                        <div class="product-card__head">
+                          <div class="product-card__title">Велосипед Десна 2611 V V010 (2018)</div>
+                          <div class="product-card__head-row">
+                            <div class="product-card__price">
+                              <div class="price">13 190 ₽</div>
+                              <div class="discount">скидка 10%</div>
+                            </div>
+                            <div class="product-card__action">
+                              <a href="#" class="btn btn--red product-card__btn">
+                                <div class="product-card__btn-icon"><svg width="39" height="31"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-basket"/></svg></div>
+                                купить
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-card__description">
+                          <ul>
+                            <li>Рама: Сталь</li>
+                            <li>Вилка: Пружинно-эластомерная</li>
+                            <li>Задний перекл: Microshift RD-M21</li>
+                            <li>Скорости: 21 (3*7)</li>
+                            <li>Тормоза: Ободные механические</li>
+                            <li>Вес: 16 кг.</li>
+                            <li>Диаметр колес: 26 дюймов</li>
+                            <li>Артикул: 1117193</li>
+                          </ul>
+                        </div>
+                      </div>                    </div>                    <div class="catalog__item">                      <!--DEV
+                      Для использования этого файла как шаблона:
+                      @ @include('blocks/product-card/product-card.html')
+                      (Нужно убрать пробел между символами @)
+                      Подробнее: https://www.npmjs.com/package/gulp-file-include
+                      <div class="product-card">content</div>
+                      -->
+                      <div class="product-card">
+                        <div class="product-card__img-wrap">
+                          <div class="label-in-stock 125 47">
+                          </div>
+                          <div class="label-sale">
+                          </div>
+                          <img src="img/product-img-350_227.png" alt class="product-card__img">
+                        </div>
+                        <div class="product-card__head">
+                          <div class="product-card__title">Велосипед Десна 2611 V V010 (2018)</div>
+                          <div class="product-card__head-row">
+                            <div class="product-card__price">
+                              <div class="price">13 190 ₽</div>
+                              <div class="discount">скидка 10%</div>
+                            </div>
+                            <div class="product-card__action">
+                              <a href="#" class="btn btn--red product-card__btn">
+                                <div class="product-card__btn-icon"><svg width="39" height="31"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-basket"/></svg></div>
+                                купить
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-card__description">
+                          <ul>
+                            <li>Рама: Сталь</li>
+                            <li>Вилка: Пружинно-эластомерная</li>
+                            <li>Задний перекл: Microshift RD-M21</li>
+                            <li>Скорости: 21 (3*7)</li>
+                            <li>Тормоза: Ободные механические</li>
+                            <li>Вес: 16 кг.</li>
+                            <li>Диаметр колес: 26 дюймов</li>
+                            <li>Артикул: 1117193</li>
+                          </ul>
+                        </div>
+                      </div>                    </div>                  </div>                </div>              </div>            </div>          </div>        </section>        <section class="section">          <div class="container">            <div class="section__head">              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>            </div>            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России.             Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность             и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться             среди 365 представленных брендов и 30 000 товаров.</p>            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства             регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры             и ресторан альпийской кухни «Шале».</p>          </div>        </section>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV
       Нужно убрать пробел между @-ами:
       @ @include('blocks/page-footer/page-footer.html')
       -->
