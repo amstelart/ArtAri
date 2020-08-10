@@ -27,55 +27,64 @@ $field-padding-horizontal:    0.7em !default;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    // align-items: flex-end;
     cursor: pointer;
 
     .no-js & {
       display: none;
     }
 
-    &:after {
-      content: '';
-      flex-grow: 1;
-      height: 1px;
-      background-color: $border-color;
-    }
+    // &:after {
+    //   content: '';
+    //   flex-grow: 1;
+    //   height: 1px;
+    //   background-color: $border-color;
+    // }
   }
 
   &__link-wrap {
     position: relative;
-    border: 1px solid $border-color;
+    flex-grow: 1;
 
     &:not(:last-child) {
-      border-right: none;
+      margin-right: 10px;
     }
 
     &--active {
 
       #{$block-name}__link {
         color: $text-color;
-        background-color: #fff;
+        background-color: $color-main;
       }
     }
   }
 
   &__link {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-color--muted;
+    color: #7b7b7b;
     text-decoration: none;
-    background-color: $gray-lightest;
+    background-color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px 16px;
+    
+    @media (min-width: $screen-xxl) {
+      padding: 14px 28px;
+      font-size: 30px;
+    }
 
     &:hover,
     &:focus {
-      color: $text-color--muted;
+
     }
   }
 
   &__content-wrapper {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    border: 1px solid $border-color;
+    background: #fff;
+    padding: 30px 15px;
     border-top: none;
   }
 

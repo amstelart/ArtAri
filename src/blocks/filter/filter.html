@@ -1,0 +1,179 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/filter/filter.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+-->
+
+<form action="" class="filter">
+  <div class="filter__inner">
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Цена</a>
+      </div>
+      <div class="filter__body">
+        <div class="field-range">
+          <div>Цена</div>
+          <div class="extra-controls form-inline">
+            <div class="fields-group">
+              <div class="field-text">
+                <input type="text" class="js-input-from field-text__input" value="0" />
+              </div>
+              <div class="field-text">
+                <input type="text" class="js-input-to field-text__input" value="0" />
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="range-slider">
+            <input type="text" class="js-range-slider" value="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Марки</a>
+      </div>
+      <div class="filter__body">
+        <div class="field-checkbox">
+          <div class="field-checkbox__input-wrap">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+              <span class="field-checkbox__name-text">Altair</span>
+            </label>
+          </div>
+          <div class="field-checkbox__input-wrap">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" id="" name="">
+              <span class="field-checkbox__name-text">Aspect</span>
+            </label>
+          </div>
+          <div class="field-checkbox__input-wrap">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" id="" name="">
+              <span class="field-checkbox__name-text">Atom</span>
+            </label>
+          </div>
+          <div class="field-checkbox__input-wrap">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" id="" name="">
+              <span class="field-checkbox__name-text">Author</span>
+            </label>
+          </div>
+          <div class="field-checkbox__input-wrap">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" id="" name="">
+              <span class="field-checkbox__name-text">Bear Bike</span>
+            </label>
+          </div>
+          <div class="field-checkbox__input-wrap">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" id="" name="">
+              <span class="field-checkbox__name-text">Benelli</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Тип</a>
+      </div>
+      <div class="filter__body">
+        <div class="field-radio">
+          <div class="field-radio__input-wrap">
+            <label class="field-radio__name">
+              <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
+              <span class="field-radio__name-text">Складные</span>
+            </label>
+          </div>
+          <div class="field-radio__input-wrap">
+            <label class="field-radio__name">
+              <input class="field-radio__input" type="radio" id="" name="demo-radio">
+              <span class="field-radio__name-text">Двухподвесы</span>
+            </label>
+          </div>
+          <div class="field-radio__input-wrap">
+            <label class="field-radio__name">
+              <input class="field-radio__input" type="radio" id="" name="demo-radio">
+              <span class="field-radio__name-text">Экстремальные</span>
+            </label>
+          </div>
+          <div class="field-radio__input-wrap">
+            <label class="field-radio__name">
+              <input class="field-radio__input" type="radio" id="" name="demo-radio">
+              <span class="field-radio__name-text">Электровелосипеды</span>
+            </label>
+          </div>
+          <div class="field-radio__input-wrap">
+            <label class="field-radio__name">
+              <input class="field-radio__input" type="radio" id="" name="demo-radio">
+              <span class="field-radio__name-text">Шоссейные</span>
+            </label>
+          </div>
+          <div class="field-radio__input-wrap">
+            <label class="field-radio__name">
+              <input class="field-radio__input" type="radio" id="" name="demo-radio">
+              <span class="field-radio__name-text">Грузовые и другие</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Подтип</a>
+      </div>
+      <div class="filter__body">
+        
+      </div>
+    </div>
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Год</a>
+      </div>
+      <div class="filter__body">
+        
+      </div>
+    </div>
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Диаметр колеса</a>
+      </div>
+      <div class="filter__body">
+        
+      </div>
+    </div>
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Рост</a>
+      </div>
+      <div class="filter__body">
+        
+      </div>
+    </div>
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Цвет</a>
+      </div>
+      <div class="filter__body">
+        
+      </div>
+    </div>
+    <div class="filter__part">
+      <div class="filter__head">
+        <a class="filter__name" href="#">Опции</a>
+      </div>
+      <div class="filter__body">
+        
+      </div>
+    </div>
+  </div>
+  <div class="filter__action">
+    <div class="btn btn--main">применить</div>
+  </div>
+</form>

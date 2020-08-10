@@ -1,0 +1,60 @@
+// В этом файле должны быть стили для БЭМ-блока consultant-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.consultant-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: #fff;
+  padding: 20px 15px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  @media (min-width: $screen-xxl) {
+    padding: 20px 35px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+    }
+  }
+
+  &__img-wrap {
+    overflow: hidden;
+    width: 219px;
+    height: 219px;
+    border-radius: 50%;
+    margin: 15px auto;
+  }
+
+  &__head {
+    text-align: center;
+    margin-bottom: 10px;
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 15px;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+    }
+  }
+  &__post {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.2;
+    @media (min-width: $screen-xxl) {
+      font-size: 20px;
+    }
+  }
+  &__action {
+    text-align: center;
+  }
+}

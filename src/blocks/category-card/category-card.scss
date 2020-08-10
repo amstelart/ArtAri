@@ -23,13 +23,17 @@
     height: 100%;
     background: rgba(#484848, 0.8);
     color: #fff;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: all 0.4s;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 22px;
+    }
 
     .category-card:hover & {
       opacity: 1;

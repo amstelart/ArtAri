@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>NTH start project</title>
+  <title>АртАри</title>
   <meta name="description" content="">
   @@include('_include/page_head.html')
 </head>
@@ -73,7 +73,7 @@
             </div>
           </div>
         </section>
-        <section class="section">
+        <section class="section section-line-decor">
           <div class="container">
             <div class="consultant">
               <div class="consultant__inner">
@@ -83,7 +83,63 @@
                   </div>
                 </div>
                 <div class="consultant__part-form">
-
+                  <form action="" class="consultant__form-wrap">
+                    <div class="consultant__form-col">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Вид товара" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Пол" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Рост" id="" name="">
+                        </span>
+                      </label>
+                      <div class="field-range" style="padding:20px;">
+                        <div>Цена</div>
+                        <div class="extra-controls form-inline">
+                          <div class="fields-group">
+                            <div class="field-text">
+                              <input type="text" class="js-input-from field-text__input" value="0" />
+                            </div>
+                            <div class="field-text">
+                              <input type="text" class="js-input-to field-text__input" value="0" />
+                            </div>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="range-slider">
+                          <input type="text" class="js-range-slider" value="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="consultant__form-col">
+                      <div class="consultant-card">
+                        <div class="consultant-card__title">Онлайн консультант</div>
+                        <div class="consultant-card__img-wrap">
+                          <img src="img/consultant-img.jpg" alt="" class="consultant-card__img">
+                        </div>
+                        <div class="consultant-card__head">
+                          <div class="consultant-card__name">Андрей Комаров</div>
+                          <div class="consultant-card__post">Специалист по подбору</div>
+                        </div>
+                        <div class="consultant-card__action">
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                              <span class="field-checkbox__name-text">Текст у флажка</span>
+                            </label>
+                          </div>
+                          <a href="#" class="btn btn--main">Помощь</a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -92,13 +148,13 @@
         <section class="section">
           <div class="container">
             <div class="section__head">
-              <h2 class="section__title">Аксессуары</h2>
+              <h2 class="section__title light center">Аксессуары</h2>
             </div>
             <div id="owl-carousel-demo-2" class="owl-carousel">
-              <div>01</div>
-              <div>02</div>
-              <div>03</div>
-              <div>04</div>
+              @@include('blocks/dop-card/dop-card.html')
+              @@include('blocks/dop-card/dop-card.html')
+              @@include('blocks/dop-card/dop-card.html')
+              @@include('blocks/dop-card/dop-card.html')
             </div>
           </div>
         </section>
@@ -108,17 +164,17 @@
               <h2 class="section__title">Распродажа велосипедов 2019</h2>
             </div>
             <div id="owl-carousel-demo-3" class="owl-carousel">
-              <div>01</div>
-              <div>02</div>
-              <div>03</div>
-              <div>04</div>
+              @@include('blocks/product-card/product-card.html')
+              @@include('blocks/product-card/product-card.html')
+              @@include('blocks/product-card/product-card.html')
+              @@include('blocks/product-card/product-card.html')
             </div>
           </div>
         </section>
         <section class="section">
           <div class="container">
             <div class="section__head">
-              <h2 class="section__title">Сеть спортивных магазинов АртАри</h2>
+              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>
             </div>
             <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России. 
             Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>

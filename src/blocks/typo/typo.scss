@@ -38,6 +38,19 @@ $border-radius:               3px !default;
 //   font-style: normal;
 // }
 
+@font-face {
+  font-family: 'Franklin Gothic Heavy';
+  src: url('../fonts/FranklinGothic-Heavy.eot');
+  src: url('../fonts/FranklinGothic-Heavy.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FranklinGothic-Heavy.woff2') format('woff2'),
+      url('../fonts/FranklinGothic-Heavy.woff') format('woff'),
+      url('../fonts/FranklinGothic-Heavy.ttf') format('truetype'),
+      url('../fonts/FranklinGothic-Heavy.svg#FranklinGothic-Heavy') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 body {
@@ -60,7 +73,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family--headings;
+  // font-family: $font-family--headings;
+  font-family: 'Franklin Gothic Heavy', arial;
   font-weight: 700;
   line-height: $line-height;
   color: currentColor;
@@ -72,7 +86,7 @@ h6 {
 h1,
 h2,
 h3 {
-  margin-top: $line-height;
+  margin-top: ($line-height / 3);
   margin-bottom: ($line-height / 2);
 }
 
@@ -125,9 +139,29 @@ blockquote,
 pre,
 address,
 figure {
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
 }
+
+// p {
+//   font-size: 18px;
+//   line-height: 1.2;
+//   margin-bottom: 20px;
+
+//   @media (min-width: $screen-xxl) {
+//     font-size: 25px;
+//     line-height: 1.2;
+//     margin-bottom: 25px;
+//   }
+// }
 
 address {
   font-style: normal;
@@ -236,23 +270,6 @@ pre {
   tab-size: 2;
 }
 
-.call-phone {
-  font-size: 26px;
-  font-weight: bold;
-  white-space: nowrap;
-  line-height: 1.1;
-}
-.call-link {
-  font-size: 17px;
-  text-decoration: underline;
-  color: inherit;
-
-  &:hover,
-  &:focus {
-    color: $red;
-    text-decoration: none;
-  }
-}
 .copyright-text {
   color: #fff;
 

@@ -16,18 +16,41 @@ $border-color:                hsl(0, 0%, 60%) !default;
   flex-wrap: wrap;
   margin-top: $line-height;
   margin-bottom: $line-height;
+  padding: 20px;
+  border-radius: 6px;
+  background: #e8e8e8;
 
   &__item {
     display: block;
     padding: 0.5em;
-    min-width: 2.5em;
-    border: 1px solid $border-color;
+    min-width: 2em;
+    // border: 1px solid $border-color;
+    border-radius: 50%;
     text-decoration: none;
     text-align: center;
     color: $text-color;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 3px;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+    }
+
+    &.prev,
+    &.next {
+      border-radius: 4px;
+      margin: 0;
+    }
+    &.prev {
+      margin-right: auto;
+    }
+    &.next {
+      margin-left: auto;
+    }
 
     & + & {
-      border-left: 0;
+      // border-left: 0;
     }
 
     &:hover,
@@ -36,16 +59,16 @@ $border-color:                hsl(0, 0%, 60%) !default;
       color: $text-color;
     }
 
-    @at-root a#{&} {
+    // @at-root a#{&} {
 
-      &:hover,
-      &:focus {
-        background-color: $gray-lightest;
-      }
-    }
+    //   &:hover,
+    //   &:focus {
+    //     background-color: $gray-lightest;
+    //   }
+    // }
 
     &--active {
-      background-color: $gray-lightest;
+      background-color: $color-main;
     }
   }
 }

@@ -1,0 +1,87 @@
+// В этом файле должны быть стили для БЭМ-блока promo, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.promo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include row;
+  }
+  &__col {
+    @include col();
+    @include col(lg, 6);
+  }
+
+  &__card {
+    position: relative;
+  }
+  &__card-top {
+    border-radius: 9px;
+    box-shadow: 0px 0px 19.53px 1.47px rgba(103, 103, 103, 0.13);
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    margin-bottom: 15px;
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 25px;
+    }
+  }
+  &__card-label {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    right: -25px;
+    @media (min-width: $screen-xxl) {
+      width: 145px;
+      height: 145px;
+      top: -25px;
+      right: -25px;
+    }
+  }
+  &__card-head {
+    background: $color-main;
+    padding: 15px 20px;
+    @media (min-width: $screen-xxl) {
+      padding: 25px;
+    }
+  }
+  &__card-title {
+    font-size: 22px;
+    color: #632b1b;
+    font-family: 'Franklin Gothic Heavy';
+    line-height: 1.2;
+    margin: 0 0 5px 0;
+    @media (min-width: $screen-xxl) {
+      font-size: 36px;
+      margin: 0 0 15px 0;
+    }
+  }
+  &__card-tag {
+    color: #2d2d2d;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Heavy';
+    line-height: 1.2;
+    margin: 0;
+    @media (min-width: $screen-xxl) {
+      font-size: 22px;
+    }
+  }
+  &__card-img {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__card-caption {
+    p {
+      font-size: 14px;
+      @media (min-width: $screen-xxl) {
+        font-size: 20px;
+      }
+    }
+  }
+}

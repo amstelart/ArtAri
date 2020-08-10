@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока sidebar-menu, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.sidebar-menu {
+
+  $block-name:                &; // #{$block-name}__element
+
+  min-width: 10em;
+  margin: 0;
+  padding: 0.3em 0;
+  list-style: none;
+
+  &__item {
+
+    & + & {
+      margin-top: -2px;
+    }
+
+    &--active {
+
+      #{$block-name}__link {
+        color: #632b1b;
+        font-weight: 700;
+        border-color: #dc1a25;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    padding: 0.5em 1em;
+    font-size: 16px;
+    color: #1f1f1f;
+    background: #fff;
+    text-decoration: none;
+    border: 2px solid #d0d0d0;
+
+    &:hover,
+    &:focus {
+      color: #632b1b;
+      font-weight: 700;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding: 0.5em 1em;
+      font-size: 20px;
+    }
+  }
+}

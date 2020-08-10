@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>АртАри</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+        
+        <section class="sidebar-layout">
+          <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+            <div class="sidebar-layout__inner">
+              <div class="sidebar-layout__col-sedebar">
+                <div class="consultant-card">
+                  <div class="consultant-card__title">Онлайн консультант</div>
+                  <div class="consultant-card__img-wrap">
+                    <img src="img/consultant-img.jpg" alt="" class="consultant-card__img">
+                  </div>
+                  <div class="consultant-card__head">
+                    <div class="consultant-card__name">Андрей Комаров</div>
+                    <div class="consultant-card__post">Специалист по подбору</div>
+                  </div>
+                  <div class="consultant-card__action">
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                        <span class="field-checkbox__name-text">Текст у флажка</span>
+                      </label>
+                    </div>
+                    <a href="#" class="btn btn--main">Помощь</a>
+                  </div>
+                </div>
+                <div class="faq-widget">
+                  <div class="faq-widget__head">
+                    <div class="faq-widget__title">ПОЛЕЗНО ЗНАТЬ</div>
+                  </div>
+                  <div class="faq-widget__body">
+                    <ul class="faq-widget__list">
+                      <li><a href="#">Каким должен быть велосипед для туризма, на что обратить внимание?</a></li>
+                      <li><a href="#">Крепим правильно резиновые рукоятки</a></li>
+                      <li><a href="#">Велоаптечка: что возить с собой?</a></li>
+                      <li><a href="#">Крепим правильно резиновые рукоятки</a></li>
+                      <li><a href="#">Велоаптечка: что возить с собой?</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-layout__col-main">
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section__head">
+              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>
+            </div>
+            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России. 
+            Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>
+
+            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность 
+            и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться 
+            среди 365 представленных брендов и 30 000 товаров.</p>
+
+            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства 
+            регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>
+
+            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры 
+            и ресторан альпийской кухни «Шале».</p>
+          </div>
+        </section>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

@@ -68,8 +68,6 @@ $border-radius:               3px !default;
   //   vertical-align: middle;
   // }
 
-
-
   &--main {
     color: #000;
     background-color: $color-main;
@@ -78,6 +76,46 @@ $border-radius:               3px !default;
     &:focus {
       color: #000;
       background-color: darken($color-main, 10%);
+    }
+
+    &--disabled,
+    &:disabled {
+      color: #000;
+      background-color: $color-main;
+    }
+  }
+
+  &--red {
+    color: #fff;
+    background-color: $red;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken($red, 10%);
+    }
+
+    &--disabled,
+    &:disabled {
+      color: #000;
+      background-color: $color-main;
+    }
+  }
+
+  &--red-outline {
+    color: $red;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid $red;
+    font-size: 32px;
+    line-height: 1;
+    padding: 15px 40px;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $red;
+      border-color: $red;
     }
 
     &--disabled,

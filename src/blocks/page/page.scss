@@ -91,6 +91,33 @@ img {
   height: auto;
 }
 
+.section-line-decor {
+  &:before,
+  &:after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    max-width: 312px;
+    background: #a0a0a0;
+    display: block;
+    margin: auto;
+  }
+  &:before {
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 90px;
+    }
+  }
+  &:after {
+    margin-top: 30px;
+
+    @media (min-width: $screen-xxl) {
+      margin-top: 90px;
+    }
+  }
+}
+
 .container {
   @include container;
 }

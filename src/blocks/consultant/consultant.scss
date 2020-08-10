@@ -12,10 +12,18 @@
 
   &__part-video {
     @include col();
-    @include col(xxl, 5);
+    @include col(xl, 5);
   }
   &__part-form {
     @include col();
-    @include col(xxl, 7);
+    @include col(xl, 7);
+  }
+  &__form-wrap {
+    @include row;
+    height: 100%;
+  }
+  &__form-col {
+    @include col();
+    @include col(xl, 6);
   }
 }

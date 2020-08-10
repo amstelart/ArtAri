@@ -6,7 +6,11 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  padding: 65px 0;
+  padding: 35px 0;
+
+  @media (min-width: $screen-xxl) {
+    padding: 65px 0;
+  }
 
   &__head {
     margin-bottom: 40px;
@@ -14,5 +18,33 @@
 
   &__title {
     margin: 0;
+    font-size: 34px;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 52px;
+    }
+
+    &.light {
+      font-size: 24px;
+      font-weight: 700;
+      font-family: Arial, sans-serif;
+
+      @media (min-width: $screen-xxl) {
+        font-size: 34px;
+      }
+    }
+    &.center {
+      text-align: center;
+    }
+    &.title-line-decor {
+      &:after {
+        content: "";
+        max-width: 490px;
+        width: 100%;
+        height: 4px;
+        background: $color-main;
+        display: block;
+      }
+    }
   }
 }

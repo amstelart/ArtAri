@@ -1,0 +1,73 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/sorting/sorting.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+
+<div class="sorting">content</div>
+
+-->
+
+<div class="sorting">
+  <div class="sorting__part">
+    <div class="sorting-view">Отображать</div>
+  </div>
+  <form action="" class="sorting__part">
+    <div class="fields-group">
+      <div class="field-checkbox">
+        <label class="field-checkbox__name">
+          <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+          <span class="field-checkbox__name-text">В наличии</span>
+        </label>
+      </div>
+      <div class="field-checkbox">
+        <label class="field-checkbox__name">
+          <input class="field-checkbox__input" type="checkbox" id="" name="">
+          <span class="field-checkbox__name-text">Со скидкой</span>
+        </label>
+      </div>
+    </div>
+  </form>
+  <form action="" class="sorting__part">
+    <div>Выводить по:</div>
+    <select>
+      <option data-display="Select">Nothing</option>
+      <option value="1">Some option</option>
+      <option value="2">Another option</option>
+      <option value="3" disabled>A disabled option</option>
+      <option value="4">Potato</option>
+    </select>
+    <select>
+      <option data-display="Select">Nothing</option>
+      <option value="1">Some option</option>
+      <option value="2">Another option</option>
+      <option value="3" disabled>A disabled option</option>
+      <option value="4">Potato</option>
+    </select>
+    <!-- <div class="fields-group">
+      <label class="field-select">
+        <div class="field-select__select-wrap">
+          <select class="field-select__select" id="" name="">
+            <option>Значение 1</option>
+            <option>Значение 2</option>
+            <option>Значение 3</option>
+          </select>
+        </div>
+      </label>
+      <label class="field-select">
+        <div class="field-select__select-wrap">
+          <select class="field-select__select" id="" name="">
+            <option>Значение 1</option>
+            <option>Значение 2</option>
+            <option>Значение 3</option>
+          </select>
+        </div>
+      </label>
+    </div> -->
+  </form>
+</div>

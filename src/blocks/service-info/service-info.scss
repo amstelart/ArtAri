@@ -1,0 +1,50 @@
+// В этом файле должны быть стили для БЭМ-блока service-info, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.service-info {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: $red;
+  color: #fff;
+  margin-bottom: 85px;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 80px;
+    
+    @media (min-width: $screen-xxl) {
+      padding: 10px 140px;
+    }
+  }
+
+  &__item {
+
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+
+    svg {
+      fill: #fff;
+      flex-shrink: 0;
+      margin-right: 15px;
+      width: 60px;
+      height: 40px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      font-size: 35px;
+      font-weight: bold;
+
+      svg {
+        width: 100px;
+        height: 60px;
+        margin-right: 30px;
+      }
+    }
+  }
+}

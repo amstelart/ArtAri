@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>АртАри</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+
+        <section class="sidebar-layout">
+          <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+            <div class="sidebar-layout__inner">
+              <div class="sidebar-layout__col-sedebar">
+                @@include('blocks/filter/filter.html')
+              </div>
+
+              <div class="sidebar-layout__col-main">
+                <h1>Избранное</h1>
+                <div class="catalog">
+                  @@include('blocks/sorting/sorting.html')
+                  <div class="catalog__list">
+                    <div class="catalog__item">
+                      @@include('blocks/product-card/product-card.html')
+                    </div>
+                    <div class="catalog__item">
+                      @@include('blocks/product-card/product-card.html')
+                    </div>
+                  </div>
+                  @@include('blocks/pagination/pagination.html')
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section__head">
+              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>
+            </div>
+            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России. 
+            Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>
+
+            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность 
+            и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться 
+            среди 365 представленных брендов и 30 000 товаров.</p>
+
+            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства 
+            регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>
+
+            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры 
+            и ресторан альпийской кухни «Шале».</p>
+          </div>
+        </section>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

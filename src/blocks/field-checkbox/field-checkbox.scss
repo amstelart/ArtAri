@@ -28,15 +28,44 @@ $line-height:                 1.375em !default;
   &__name {
     position: relative;
     display: inline-block;
-    padding-left: 1.5em;
     margin-right: 0.6em;
     font-weight: 400;
     line-height: $line-height;
+    padding-left: 25px;
+    line-height: 22px;
+    font-size: 16px;
+    @media (min-width: $screen-xxl) {
+      padding-left: 55px;
+      line-height: 42px;
+      font-size: 22px;
+    }
   }
 
   &__name-text {
 
     // свой чекбокс с картинкой
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.1em;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background-image: svg-load('../blocks/field-checkbox/img_to_bg/checkbox.svg');
+      background-size: 100%;
+      @media (min-width: $screen-xxl) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    @at-root input:checked ~ &:before {
+      background-image: svg-load('../blocks/field-checkbox/img_to_bg/checkbox--checked.svg');
+    }
+
+    // / свой чекбокс с картинкой
+
+    // свой чекбокс без картинок
 
     // &:before {
     //   content: '';
@@ -45,49 +74,31 @@ $line-height:                 1.375em !default;
     //   left: 0;
     //   width: 14px;
     //   height: 14px;
-    //   background-image: svg-load('../blocks/field-checkbox/img_to_bg/checkbox.svg');
-    //   background-size: 100%;
-    // }
-    // @at-root input:checked ~ &:before {
-    //   background-image: svg-load('../blocks/field-checkbox/img_to_bg/checkbox--checked.svg');
+    //   border: 2px solid currentColor;
+    //   border-radius: $border-radius;
     // }
 
-    // / свой чекбокс с картинкой
+    // @at-root input:focus ~ &:before {
+    //   @include field-focus;
+    // }
 
-    // свой чекбокс без картинок
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   top: calc(0.1em + 1px);
+    //   left: 3px;
+    //   width: 14px;
+    //   height: 6px;
+    //   opacity: 0;
+    //   border-left: 2px solid currentColor;
+    //   border-bottom: 2px solid currentColor;
+    //   transform: rotate(-45deg);
+    //   transition: opacity $transition-time;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0.1em;
-      left: 0;
-      width: 14px;
-      height: 14px;
-      border: 2px solid currentColor;
-      border-radius: $border-radius;
-    }
-
-    @at-root input:focus ~ &:before {
-      @include field-focus;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: calc(0.1em + 1px);
-      left: 3px;
-      width: 14px;
-      height: 6px;
-      opacity: 0;
-      border-left: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      transform: rotate(-45deg);
-      transition: opacity $transition-time;
-
-      @at-root input:checked ~ & {
-        opacity: 1;
-      }
-    }
+    //   @at-root input:checked ~ & {
+    //     opacity: 1;
+    //   }
+    // }
 
     // / свой чекбокс без картинок
   }

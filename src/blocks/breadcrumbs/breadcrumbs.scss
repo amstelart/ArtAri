@@ -14,6 +14,11 @@ $text-color:                  hsl(0, 0%, 10%) !default;
   padding: 0;
   list-style: none;
   margin: $line-height 0;
+  font-size: 16px;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 23px;
+  }
 
   &__item {
     display: inline-block;
@@ -21,15 +26,15 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     white-space: nowrap;
 
     &:not(:last-child):after {
-      content: '>';
+      content: '→';
       display: inline-block;
       margin-left: 0.8em;
-      color: $gray;
+      color:#888888;
     }
   }
 
   &__link {
-    color: $text-color;
+    color: #888888;
     text-decoration: none;
 
     &:hover,

@@ -1,0 +1,65 @@
+// В этом файле должны быть стили для БЭМ-блока filter, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.filter {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    background: #fff;
+    box-shadow: 0px 13px 15.54px 5.46px rgba(53, 53, 53, 0.1);
+    margin-bottom: 40px;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 65px;
+    }
+  }
+  &__part {
+    padding: 10px 15px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #c4c4c4;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding: 35px;
+    }
+  }
+  &__head {}
+  &__name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2d2d2d;
+    line-height: 1.1;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 14px;
+      height: 8px;
+      position: absolute;
+      right: 0;
+      top: calc(50% - 4px);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3C!-- Creator: CorelDRAW 2019 (64-Bit) --%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='1.8946mm' height='0.8837mm' version='1.1' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd'%0AviewBox='0 0 3.15 1.47' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xodm='http://www.corel.com/coreldraw/odm/2003'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B .str0 %7Bstroke:%23632B1B;stroke-width:0.33;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256%7D .fil0 %7Bfill:none%7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg id='Слой_x0020_1'%3E%3Cmetadata id='CorelCorpID_0Corel-Layer'/%3E%3Cpolyline class='fil0 str0' points='0.17,0.22 1.56,1.3 2.98,0.17 '/%3E%3C/g%3E%3C/svg%3E%0A");
+      @media (min-width: $screen-xxl) {
+        width: 23px;
+        height: 11px;
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+      margin: 10px 0;
+    }
+  }
+  &__action {
+    text-align: center;
+  }
+}
