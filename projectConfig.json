@@ -76,7 +76,12 @@
     "description": [],
     "catalog": [],
     "sorting": [],
-    "promo": []
+    "promo": [],
+    "view-nav": [],
+    "nice-select": [],
+    "question-table": [],
+    "contact-box": [],
+    "contact-gallery": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

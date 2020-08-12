@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока question-table, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.question-table {
+
+  $block-name:                &; // #{$block-name}__element
+
+  width: 100%;
+  margin-bottom: 60px;
+
+  th {
+    font-size: 23px;
+    font-weight: 700;
+    padding: 0 20px 35px 0;
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  td {
+    text-align: center;
+    font-size: 25px;
+    white-space: nowrap;
+    padding: 10px 0;
+    &:not(:first-child) {
+      padding: 8px 15px;
+    }
+  }
+
+  &__qu {
+    display: block;
+    background: #fff;
+    border-radius: 9px;
+    border: 1px solid #dcdcdc;
+    font-size: 18px;
+    padding: 16px 20px;
+    text-align: left;
+  }
+}

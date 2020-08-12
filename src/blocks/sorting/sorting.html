@@ -15,10 +15,17 @@
 
 <div class="sorting">
   <div class="sorting__part">
-    <div class="sorting-view">Отображать</div>
+    <div class="sorting__part-title">Отображать</div>
+    <div class="sorting__part-inner">
+      <ul class="view-nav">
+        <li><a href="#"><svg width="34" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#view-icon-01"></use></svg></a></li>
+        <li class="active"><a href="#"><svg width="34" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#view-icon-02"></use></svg></a></li>
+        <li><a href="#"><svg width="34" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#view-icon-03"></use></svg></a></li>
+      </ul>
+    </div>
   </div>
   <form action="" class="sorting__part">
-    <div class="fields-group">
+    <div class="sorting__part-inner">
       <div class="field-checkbox">
         <label class="field-checkbox__name">
           <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
@@ -34,21 +41,23 @@
     </div>
   </form>
   <form action="" class="sorting__part">
-    <div>Выводить по:</div>
-    <select>
-      <option data-display="Select">Nothing</option>
-      <option value="1">Some option</option>
-      <option value="2">Another option</option>
-      <option value="3" disabled>A disabled option</option>
-      <option value="4">Potato</option>
-    </select>
-    <select>
-      <option data-display="Select">Nothing</option>
-      <option value="1">Some option</option>
-      <option value="2">Another option</option>
-      <option value="3" disabled>A disabled option</option>
-      <option value="4">Potato</option>
-    </select>
+    <div class="sorting__part-title">Выводить по:</div>
+    <div class="sorting__part-inner">
+      <div class="field-select">
+        <select class="small type-1">
+          <option data-display="4">4</option>
+          <option value="1">12</option>
+          <option value="2">24</option>
+        </select>
+      </div>
+      <div class="field-select">
+        <select class="small type-2">
+          <option data-display="сначала недорогие">сначала недорогие</option>
+          <option value="1">сначала дорогие</option>
+          <option value="2">сначала популярные</option>
+        </select>
+      </div>
+    </div>
     <!-- <div class="fields-group">
       <label class="field-select">
         <div class="field-select__select-wrap">

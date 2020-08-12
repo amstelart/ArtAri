@@ -1,0 +1,50 @@
+// В этом файле должны быть стили для БЭМ-блока contact-box, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contact-box {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border-radius: 9px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 15.52px 0.48px rgba(74, 74, 74, 0.1);
+  padding: 30px;
+
+  &__inner {
+    @include row;
+  }
+
+  &__caption {
+    @include col();
+    @include col(xl, 8);
+  }
+  &__gallery {
+    @include col();
+    @include col(xl, 4);
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 35px;
+      font-size: 18px;
+      position: relative;
+      padding-left: 70px;
+      padding-top: 5px;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: $color-main;
+      }
+    }
+  }
+}
+

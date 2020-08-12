@@ -7,14 +7,67 @@
   $block-name:                &; // #{$block-name}__element
 
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-xxl) {
+    margin-bottom: 60px;
+  }
   
   &__part {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     background: #dcdcdc;
-    padding: 20px 30px;
+    padding: 10px 15px;
     flex-grow: 1;
-    &:not(:last-child) {
-      margin-right: 3px;
+    // justify-content: space-between;
+    
+
+    @media (min-width: $screen-xxl) {
+      padding: 20px 30px;
+
+      &:not(:last-child) {
+        margin-right: 3px;
+      }
+    }
+  }
+  &__part-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 15px 10px 0;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 17px;
+    }
+  }
+  &__part-inner {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    .field-checkbox {
+      margin-bottom: 0;
+    }
+    .field-checkbox__name {
+      @media (min-width: $screen-xxl) {
+        padding-left: 35px;
+        line-height: 26px;
+      }
+    }
+    .field-checkbox__name-text {
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      @media (min-width: $screen-xxl) {
+        font-size: 17px;
+        &:before {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+    .field-select {
+      margin-bottom: 0;
     }
   }
 }

@@ -12,15 +12,34 @@
 
   &__part-video {
     @include col();
-    @include col(xl, 5);
+    @include col(xl, 6);
   }
   &__part-form {
     @include col();
-    @include col(xl, 7);
+    @include col(xl, 6);
   }
   &__form-wrap {
     @include row;
     height: 100%;
+
+    .field-text {
+      margin-bottom: 17px;
+    }
+    .field-text__input {
+      border-color: $color-main;
+      text-align: center;
+
+      &::placeholder {
+        text-align: center;
+      }
+    }
+    .field-range {
+
+    }
+  }
+  &__form-box {
+    padding: 0 25px;
+    margin-bottom: 40px;
   }
   &__form-col {
     @include col();

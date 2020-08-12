@@ -114,3 +114,89 @@
 //   }
 // }
 
+.field-range {
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  margin-bottom: ($line-height / 2);
+
+  &__name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+      margin-bottom: 24px;
+    }
+  }
+  &__input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__input-wrap {
+    position: relative;
+  }
+  &__separator {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    margin: 12px;
+  }
+  &__input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    // height: 2.125em;
+    padding: 0.3em 0.7em;
+    margin: 0;
+    line-height: $line-height;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #fff;
+    border: 2px solid #d0d0d0;
+    border-radius: 0;
+    appearance: textfield;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+      padding: 0.4em 0.7em;
+    }
+
+    &:focus {
+      @include field-focus;
+    }
+
+    &[disabled],
+    &[readonly] {
+      cursor: default;
+      background-color: $gray-lighter;
+    }
+
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+      // height: auto;
+    }
+
+    &::placeholder {
+      color: $text-color--muted;
+      opacity: 1;
+    }
+  }
+
+  &__slider {
+    .irs--round .irs-handle {
+      border-color: $color-main;
+    }
+    .irs--round .irs-bar {
+      background-color: $color-main;
+    }
+    .irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single {
+      background-color: $color-main;
+      color: #000;
+    }
+    .irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before {
+      border-top-color: $color-main;
+    }
+  }
+}

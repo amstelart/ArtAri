@@ -1,0 +1,33 @@
+// В этом файле должны быть стили для БЭМ-блока .nice-select, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.nice-select {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &.type-1 {
+    min-width: 70px;
+  }
+  &.type-2 {
+    min-width: 230px;
+  }
+  &.small {
+    height: 26px;
+    line-height: 24px;
+     .option {
+       font-size: 16px;
+     }
+     .current {
+      color: #632b1b;
+      font-weight: 700;
+      font-size: 16px;
+     }
+     &:after {
+      border-color: #632b1b;
+      height: 8px;
+      width: 8px;
+      margin-top: -6px;
+     }
+   }
+}
