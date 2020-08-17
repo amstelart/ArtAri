@@ -42,6 +42,15 @@
       @ @include('blocks/page-header/page-header.html')
       -->
       <header class="page-header" role="banner">
+        <div class="page-header__mobile-top container">
+          <div class="mobile-call">
+            <div class="mobile-call__inner">
+              <span class="mobile-call__icon"></span>
+              <div class="mobile-call__phone">8 (495) 204-13-22</div>
+              <a href="#" class="mobile-call__link">Заказать обратный звонок</a>
+            </div>
+          </div>
+        </div>
         <nav id="main-nav" class="main-nav" role="navigation">
           <div class="container">
             <ul class="main-nav__list">
@@ -169,13 +178,85 @@
           </div>
         </nav>
       </header>
-      <main role="main">        <section class="section">          <div class="container">            <div class="section__head">              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>            </div>            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России.             Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность             и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться             среди 365 представленных брендов и 30 000 товаров.</p>            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства             регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры             и ресторан альпийской кухни «Шале».</p>          </div>        </section>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV
+      <main role="main">        <section class="fw-layout">          <div class="container">            <!--DEV
+            Для использования этого файла как шаблона:
+            @ @include('blocks/breadcrumbs/breadcrumbs.html')
+            (Нужно убрать пробел между символами @)
+            Подробнее: https://www.npmjs.com/package/gulp-file-include
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог</a></li>
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Маркеры</a></li>
+            </ul>
+            -->
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Каталог</a></li>
+              <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Маркеры</a></li>
+            </ul>
+            <h1>Моя корзина</h1>            <div class="basket-code">              <div class="basket-code__caption">Номер дисконтной карты, подарочный сертификат или промокод</div>              <form action class="basket-code__wrap">                <label class="field-text">                  <span class="field-text__input-wrap">                    <input class="field-text__input" type="text" placeholder id name>                  </span>                </label>                <button class="btn btn--main" type="submit">Войти</button>              </form>            </div>            <div class="basket-items-list">              <div class="basket-item">                <div class="basket-item__card">                  <div class="basket-item__head">Товар</div>                  <div class="basket-item__product">                    <div class="basket-item__img-wrap">                      <div class="basket-item__img">                        <img src="img/product-img-350_227.png" alt>                      </div>                    </div>                    <div class="basket-item__descriptions">                      <div class="basket-item__title"><a href="#">Велосипед Десна 2611 V V010 (2018)</a></div>                      <div class="basket-item__vendorcode">арт. 1117360</div>                      <div class="basket-item__color-select">                        <div class="field-select">                          <div class="field-select__name">Указать цвет / размер:</div>                          <select class="wide">                            <option data-display="19 Жертый">19 Желтый</option>                            <option value="1">19 Желтый</option>                            <option value="2">19 Желтый</option>                          </select>                        </div>                      </div>                      <div class="basket-item__rassrochka"><i>Товар доступен для покупки в рассрочку</i></div>                    </div>                  </div>                </div>                <div class="basket-item__price">                  <div class="basket-item__head">Цена за 1 шт.</div>                  <div class="basket-item__price-current">13 190 ₽</div>                </div>                <div class="basket-item__amount">                  <div class="basket-item__head">Количество</div>                  <div class="field-num">                    <span class="field-num__input-wrap">                      <span class="field-num__input-and-btns">                        <button class="field-num__btn field-num__btn--minus" type="button">-</button>                        <button class="field-num__btn field-num__btn--plus" type="button">+</button>                        <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">                      </span>                    </span>                  </div>                </div>                <div class="basket-item__price">                  <div class="basket-item__head">Общая стоимость</div>                  <div class="basket-item__price-current">13 190 ₽</div>                </div>                <div class="basket-item__remove">                  <span class="close" aria-label="Закрыть"><span></span></span>                </div>              </div>            </div>            <div class="basket-total">              <div class="basket-total__head">                <span>Мой заказ:</span>              </div>              <div class="basket-total__part">                <div class="basket-total__part-title">Стоимость товаров (без учёта доставки):</div>                <div class="basket-total__part-sum">15 300 ₽</div>              </div>              <div class="basket-total__part">                <div class="basket-total__part-title">Экономия:</div>                <div class="basket-total__part-sum">2 110 ₽</div>              </div>              <div class="basket-total__part">                <div class="basket-total__part-title">Списано бонусами:</div>                <div class="basket-total__part-sum">0 ₽</div>              </div>              <div class="basket-total__part payment-result">                <div class="basket-total__part-title">Итого к оплате:</div>                <div class="basket-total__part-sum">13 190 ₽</div>              </div>            </div>            <section class="section">              <div class="section__head">                <h2 class="section__title light center">Аксессуары</h2>              </div>              <div id="owl-carousel-demo-2" class="owl-carousel">                <!--DEV
+                Для использования этого файла как шаблона:
+                @ @include('blocks/dop-card/dop-card.html')
+                (Нужно убрать пробел между символами @)
+                Подробнее: https://www.npmjs.com/package/gulp-file-include
+                -->
+                <div class="dop-card">
+                  <div class="dop-card__img-wrap">
+                    <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
+                  </div>
+                  <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
+                  <div class="dop-card__action">
+                    <a href="#" class="btn btn--red-outline dop-card__btn">5 390 ₽</a>
+                  </div>
+                </div>                <!--DEV
+                Для использования этого файла как шаблона:
+                @ @include('blocks/dop-card/dop-card.html')
+                (Нужно убрать пробел между символами @)
+                Подробнее: https://www.npmjs.com/package/gulp-file-include
+                -->
+                <div class="dop-card">
+                  <div class="dop-card__img-wrap">
+                    <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
+                  </div>
+                  <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
+                  <div class="dop-card__action">
+                    <a href="#" class="btn btn--red-outline dop-card__btn">5 390 ₽</a>
+                  </div>
+                </div>                <!--DEV
+                Для использования этого файла как шаблона:
+                @ @include('blocks/dop-card/dop-card.html')
+                (Нужно убрать пробел между символами @)
+                Подробнее: https://www.npmjs.com/package/gulp-file-include
+                -->
+                <div class="dop-card">
+                  <div class="dop-card__img-wrap">
+                    <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
+                  </div>
+                  <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
+                  <div class="dop-card__action">
+                    <a href="#" class="btn btn--red-outline dop-card__btn">5 390 ₽</a>
+                  </div>
+                </div>                <!--DEV
+                Для использования этого файла как шаблона:
+                @ @include('blocks/dop-card/dop-card.html')
+                (Нужно убрать пробел между символами @)
+                Подробнее: https://www.npmjs.com/package/gulp-file-include
+                -->
+                <div class="dop-card">
+                  <div class="dop-card__img-wrap">
+                    <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
+                  </div>
+                  <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
+                  <div class="dop-card__action">
+                    <a href="#" class="btn btn--red-outline dop-card__btn">5 390 ₽</a>
+                  </div>
+                </div>              </div>            </section>            <form action class="basket-сheckout">              <h2>Оформление заказа</h2>              <div class="basket-сheckout__part">                <h3>Доставка</h3>                <div class="field-radio field-radio--inline">                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio" checked>                      <span class="field-radio__name-text">Доставка по Москве и МКАД </span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Доставка за МКАД </span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Доставка по России</span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Самовывоз из магазина</span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Пункты самовывоза</span>                    </label>                  </div>                </div>                <div class="basket-сheckout__deli">                  <p>Стоимость доставки вашего заказа <b>0 руб.</b> (в пределах МКАД)</p>                  <p>Общая стоимость заказа: <b>13 190 руб.</b></p>                </div>              </div>              <div class="basket-сheckout__part">                <h3>Информация о покупателе</h3>                <div class="basket-сheckout__user">                  <div class="basket-сheckout__user-col">                    <h4>Физическое лицо:</h4>                    <div class="basket-сheckout__user-fields">                      <label class="field-text">                        <span class="field-text__name">ФИО*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">E-mail*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Мобильный телефон*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Дополнительный телефон</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Размер рамы/рост</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Адрес*</span>                        <span class="field-text__input-wrap">                          <textarea class="field-text__input" placeholder></textarea>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Пожелания</span>                        <span class="field-text__input-wrap">                          <textarea class="field-text__input" placeholder></textarea>                        </span>                      </label>                    </div>                  </div>                  <div class="basket-сheckout__user-col">                    <h4>Юридическое лицо:</h4>                    <div class="basket-сheckout__user-fields">                      <label class="field-text">                        <span class="field-text__name">Организация*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">E-mail*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Мобильный телефон*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Дополнительный телефон</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Адрес юридический*</span>                        <span class="field-text__input-wrap">                          <textarea class="field-text__input" placeholder></textarea>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Адрес фактический*</span>                        <span class="field-text__input-wrap">                          <textarea class="field-text__input" placeholder></textarea>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">ИНН/КПП*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">БИК*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Расчетный счет*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Корр счет*</span>                        <span class="field-text__input-wrap">                          <input class="field-text__input" type="text" placeholder id name>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__name">Пожелания</span>                        <span class="field-text__input-wrap">                          <textarea class="field-text__input" placeholder></textarea>                        </span>                      </label>                    </div>                  </div>                </div>              </div>              <div class="basket-сheckout__part">                <h3>Способ оплаты</h3>                <div class="field-radio">                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio" checked>                      <span class="field-radio__name-text">Оплата наличными при получении </span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Оплата банковской картой при получении </span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Предоплата в банке по счету для физ или юр лиц (Возможна комиссия банка)</span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Оформление заявки через Тинькофф Кредит</span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Предоплата по карте на сайте (комиссия 0%)</span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Предоплата электронными деньгами (комиссия 0%)</span>                    </label>                  </div>                  <div class="field-radio__input-wrap">                    <label class="field-radio__name">                      <input class="field-radio__input" type="radio" id name="demo-radio">                      <span class="field-radio__name-text">Оплатить частями. Рассрочка без % до 6 мес. (комиссия 0%)</span>                    </label>                  </div>                </div>              </div>              <div class="basket-сheckout__action">                <div class="action-info">                  <p>Нажатием кнопки "Оформить заказ" Вы подтверждаете свое согласие с <a href="#">Договором оферты</a> и даете своё согласие на обработку своих                     персональных данных на условиях, определенных <a href="#">Политикой конфиденциальности</a>.</p>                    <div class="field-checkbox">                      <label class="field-checkbox__name">                        <input class="field-checkbox__input" type="checkbox" id name checked>                        <span class="field-checkbox__name-text">Запомнить мои персональные данные в этом браузере (в Cookie). Позволит в дальнейшем не вбивать вам ваши данные в корзине заказа.</span>                      </label>                    </div>                </div>                <div class="action-btn-wrap">                  <button class="btn btn--main">Оформить заказ</button>                </div>              </div>            </form>          </div>        </section>        <section class="section">          <div class="container">            <div class="section__head">              <h2 class="section__title title-line-decor">Сеть спортивных магазинов АртАри</h2>            </div>            <p>Магазин АРТАРИ — это 20 профессиональных магазинов и крупнейшая дилерская сеть на рынке спортивных товаров в России.             Наша специализация — велосипеды, туризм, обувь и одежда для бега, горные и беговые лыжи, сноуборды.</p>            <p>Магазины АРТАРИ представлены в Москве, Санкт-Петербурге, Екатеринбурге, Самаре, Челябинске и Красной Поляне. Экспертность             и широчайший выбор — наши отличительные особенности. Консультанты сами катаются на том, что продают, и помогут вам сориентироваться             среди 365 представленных брендов и 30 000 товаров.</p>            <p>Интернет-магазин спортивных товаров АРТАРИ выполняет и доставляет заказы по всей России. При сумме заказа от 7000 руб для большинства             регионов России доступна бесплатная доставка (вес каждого товара не должен превышать 30 кг).</p>            <p>В группу компаний входит спортивный комплекс АРТАРИ на Нагорной, горнолыжные школы в Москве и Красной Поляне, сервисные центры             и ресторан альпийской кухни «Шале».</p>          </div>        </section>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV
       Нужно убрать пробел между @-ами:
       @ @include('blocks/page-footer/page-footer.html')
       -->
       <footer class="page-footer" role="contentinfo">
         <div class="container">
-          <div class="page-footer__inner">
+          <div class="page-footer__inner mobile-hidden">
             <div class="page-footer__top">
               <div class="page-footer__info">
                 <div class="footer-logo">
@@ -222,12 +303,169 @@
                 <div class="footer-contacts">
                   <span class="footer-contacts__phone">8 (495) 204-13-22</span>
                   <a href="#" class="btn btn--main">Обратный звонок</a>
-                  <div class="social"></div>
+                  <div class="footer-contacts__social">
+                    <ul class="social">
+                      <li class="social__link-wrap" title="ВКонтакте">
+                        <a class="social__link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32.2582mm" height="32.2582mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewbox="0 0 189.65 189.65" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+                           <defs>
+                            <style type="text/css">
+                             <![CDATA[
+                              .str0 {stroke:#FEFEFE;stroke-width:7.96;stroke-miterlimit:22.9256}
+                              .fil0 {fill:#2B2A29}
+                              .fil1 {fill:#FEFEFE}
+                             ]]>
+                            </style>
+                           </defs>
+                           <g id="Слой_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"/>
+                            <circle class="fil0 str0" cx="94.83" cy="94.83" r="90.84"/>
+                            <path class="fil1" d="M80.54 68.27l0.42 32.04c-1.36,-1.08 -2.03,-2.33 -2.99,-3.74 -6.21,-9.12 -12.56,-20.3 -16.13,-30.66l-24.5 -0.91c2.64,10.51 14.64,32.27 21.06,40.69 4.12,5.4 9.4,11.17 15.34,15.02 8.53,5.53 13.8,3.87 27.25,3.87l0.04 -13.62c8.88,-0.61 6.62,-0.41 10.73,3.61 11.53,11.27 3.72,9.27 21.41,9.27 4.39,0 11.01,0.39 15.12,-0.13l-18.56 -24.08 22.58 -32.87 -27.23 0c-1.51,3.13 -20.19,28.18 -20.7,28.56l-0.01 -30.48 -25.96 0c-0.2,3.49 0.63,2.19 2.13,3.43z"/>
+                           </g>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__link-wrap" title="Instagram">
+                        <a class="social__link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32.2582mm" height="32.2582mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewbox="0 0 148.79 148.79" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+                           <defs>
+                            <style type="text/css">
+                             <![CDATA[
+                              .str0 {stroke:#FEFEFE;stroke-width:6.25;stroke-miterlimit:22.9256}
+                              .fil0 {fill:#2B2A29}
+                              .fil1 {fill:#FEFEFE}
+                             ]]>
+                            </style>
+                           </defs>
+                           <g id="Слой_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"/>
+                            <circle class="fil0 str0" cx="74.4" cy="74.4" r="71.27"/>
+                            <g id="_2910503207088">
+                             <path class="fil1" d="M49.69 28.47c-11.71,2.1 -21.13,11.66 -21.59,24.79 -0.22,6.45 -0.4,41.92 0.41,46.23 2.14,11.44 11.89,20.79 24.74,21.21 6.5,0.21 41.57,0.4 46,-0.38 11.39,-2 20.97,-11.77 21.44,-24.54 0.23,-6.22 0.38,-41.77 -0.33,-45.99 -1.95,-11.58 -11.67,-21.12 -24.53,-21.68 -6.07,-0.26 -42.02,-0.38 -46.14,0.35z"/>
+                             <path class="fil0" d="M52.21 35.18c-6.13,0.68 -10.32,3.68 -12.88,6.89 -3.75,4.71 -4.27,8.22 -4.27,15.48 0.01,6.96 -0.35,34.81 0.11,39.23 0.58,5.54 3.91,10.55 6.8,12.65 5.19,3.77 7.74,4.3 15.57,4.29 7.05,-0.01 34.83,0.35 39.36,-0.13 5.67,-0.6 9.89,-3.61 12.58,-6.84 3.43,-4.12 4.24,-8.93 4.24,-15.62 -0.01,-6.81 0.35,-35.13 -0.14,-39.35 -0.61,-5.34 -3.66,-10.15 -6.89,-12.53 -4.66,-3.44 -8.4,-4.2 -15.57,-4.19 -6.62,0 -34.87,-0.34 -38.93,0.12z"/>
+                             <path class="fil1" d="M71.46 51.65c-11.85,1.76 -21.76,11.96 -19.84,25.91 1.58,11.48 12.42,21.6 25.96,19.62 11.54,-1.69 21.62,-12.41 19.57,-26.09 -1.7,-11.34 -12.29,-21.42 -25.69,-19.44z"/>
+                             <path class="fil0" d="M72.35 58.54c-21.18,2.97 -16.76,34.5 4.26,31.72 8.03,-1.06 14.94,-8.71 13.62,-18.18 -1.11,-7.95 -8.63,-14.84 -17.88,-13.54z"/>
+                             <path class="fil1" d="M97.03 45.36c-6.03,3.02 -1.26,10.88 3.96,8.39 4.87,-2.32 1.81,-11.28 -3.96,-8.39z"/>
+                            </g>
+                           </g>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__link-wrap" title="Facebook">
+                        <a class="social__link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32.2582mm" height="32.2582mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewbox="0 0 166.87 166.87" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+                           <defs>
+                            <style type="text/css">
+                             <![CDATA[
+                              .str0 {stroke:#FEFEFE;stroke-width:7.01;stroke-miterlimit:22.9256}
+                              .fil0 {fill:#2B2A29}
+                              .fil1 {fill:#FEFEFE}
+                             ]]>
+                            </style>
+                           </defs>
+                           <g id="Слой_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"/>
+                            <circle class="fil0 str0" cx="83.43" cy="83.43" r="79.93"/>
+                            <path class="fil1" d="M72.01 69.26l-18.25 0.02 0 18.46 18.21 0.17 0.17 52.4 18.12 0.13 0.01 -52.54 18.21 0 4.16 -18.63 -22.22 -0.01c-0.44,-3.17 -0.15,-7.93 -0.16,-11.27 -0.01,-4.29 -0.62,-7.06 2.32,-9.23 4.34,-3.19 14.62,-2.37 20.5,-2.41 -0.48,-23.02 1.16,-19.67 -6.46,-19.83 -7.47,-0.16 -16.98,-0.35 -23.55,2.24 -16.15,6.36 -9.01,23.82 -11.08,40.51z"/>
+                           </g>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="page-footer__bottom">
               <span class="copyright-text">&copy; Copyright 2011-2020 интернет магазин велосипедов <span>Артари</span></span>
+            </div>
+          </div>
+          <div class="page-footer__inner-mobile mobile-show">
+            <div class="page-footer__row-mobile">
+              <div class="page-footer__left">
+                <a href="index.html" class="logo">
+                  <img src="img/logo-white.png" alt="logo">
+                </a>
+                <div class="copyright-text">&copy; Copyright 2011-2020 интернет магазин велосипедов <span>Артари</span></div>
+                <ul class="social">
+                  <li class="social__link-wrap" title="ВКонтакте">
+                    <a class="social__link" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32.2582mm" height="32.2582mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewbox="0 0 189.65 189.65" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+                       <defs>
+                        <style type="text/css">
+                         <![CDATA[
+                          .str0 {stroke:#FEFEFE;stroke-width:7.96;stroke-miterlimit:22.9256}
+                          .fil0 {fill:#2B2A29}
+                          .fil1 {fill:#FEFEFE}
+                         ]]>
+                        </style>
+                       </defs>
+                       <g id="Слой_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"/>
+                        <circle class="fil0 str0" cx="94.83" cy="94.83" r="90.84"/>
+                        <path class="fil1" d="M80.54 68.27l0.42 32.04c-1.36,-1.08 -2.03,-2.33 -2.99,-3.74 -6.21,-9.12 -12.56,-20.3 -16.13,-30.66l-24.5 -0.91c2.64,10.51 14.64,32.27 21.06,40.69 4.12,5.4 9.4,11.17 15.34,15.02 8.53,5.53 13.8,3.87 27.25,3.87l0.04 -13.62c8.88,-0.61 6.62,-0.41 10.73,3.61 11.53,11.27 3.72,9.27 21.41,9.27 4.39,0 11.01,0.39 15.12,-0.13l-18.56 -24.08 22.58 -32.87 -27.23 0c-1.51,3.13 -20.19,28.18 -20.7,28.56l-0.01 -30.48 -25.96 0c-0.2,3.49 0.63,2.19 2.13,3.43z"/>
+                       </g>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__link-wrap" title="Instagram">
+                    <a class="social__link" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32.2582mm" height="32.2582mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewbox="0 0 148.79 148.79" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+                       <defs>
+                        <style type="text/css">
+                         <![CDATA[
+                          .str0 {stroke:#FEFEFE;stroke-width:6.25;stroke-miterlimit:22.9256}
+                          .fil0 {fill:#2B2A29}
+                          .fil1 {fill:#FEFEFE}
+                         ]]>
+                        </style>
+                       </defs>
+                       <g id="Слой_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"/>
+                        <circle class="fil0 str0" cx="74.4" cy="74.4" r="71.27"/>
+                        <g id="_2910503207088">
+                         <path class="fil1" d="M49.69 28.47c-11.71,2.1 -21.13,11.66 -21.59,24.79 -0.22,6.45 -0.4,41.92 0.41,46.23 2.14,11.44 11.89,20.79 24.74,21.21 6.5,0.21 41.57,0.4 46,-0.38 11.39,-2 20.97,-11.77 21.44,-24.54 0.23,-6.22 0.38,-41.77 -0.33,-45.99 -1.95,-11.58 -11.67,-21.12 -24.53,-21.68 -6.07,-0.26 -42.02,-0.38 -46.14,0.35z"/>
+                         <path class="fil0" d="M52.21 35.18c-6.13,0.68 -10.32,3.68 -12.88,6.89 -3.75,4.71 -4.27,8.22 -4.27,15.48 0.01,6.96 -0.35,34.81 0.11,39.23 0.58,5.54 3.91,10.55 6.8,12.65 5.19,3.77 7.74,4.3 15.57,4.29 7.05,-0.01 34.83,0.35 39.36,-0.13 5.67,-0.6 9.89,-3.61 12.58,-6.84 3.43,-4.12 4.24,-8.93 4.24,-15.62 -0.01,-6.81 0.35,-35.13 -0.14,-39.35 -0.61,-5.34 -3.66,-10.15 -6.89,-12.53 -4.66,-3.44 -8.4,-4.2 -15.57,-4.19 -6.62,0 -34.87,-0.34 -38.93,0.12z"/>
+                         <path class="fil1" d="M71.46 51.65c-11.85,1.76 -21.76,11.96 -19.84,25.91 1.58,11.48 12.42,21.6 25.96,19.62 11.54,-1.69 21.62,-12.41 19.57,-26.09 -1.7,-11.34 -12.29,-21.42 -25.69,-19.44z"/>
+                         <path class="fil0" d="M72.35 58.54c-21.18,2.97 -16.76,34.5 4.26,31.72 8.03,-1.06 14.94,-8.71 13.62,-18.18 -1.11,-7.95 -8.63,-14.84 -17.88,-13.54z"/>
+                         <path class="fil1" d="M97.03 45.36c-6.03,3.02 -1.26,10.88 3.96,8.39 4.87,-2.32 1.81,-11.28 -3.96,-8.39z"/>
+                        </g>
+                       </g>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__link-wrap" title="Facebook">
+                    <a class="social__link" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32.2582mm" height="32.2582mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewbox="0 0 166.87 166.87" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+                       <defs>
+                        <style type="text/css">
+                         <![CDATA[
+                          .str0 {stroke:#FEFEFE;stroke-width:7.01;stroke-miterlimit:22.9256}
+                          .fil0 {fill:#2B2A29}
+                          .fil1 {fill:#FEFEFE}
+                         ]]>
+                        </style>
+                       </defs>
+                       <g id="Слой_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"/>
+                        <circle class="fil0 str0" cx="83.43" cy="83.43" r="79.93"/>
+                        <path class="fil1" d="M72.01 69.26l-18.25 0.02 0 18.46 18.21 0.17 0.17 52.4 18.12 0.13 0.01 -52.54 18.21 0 4.16 -18.63 -22.22 -0.01c-0.44,-3.17 -0.15,-7.93 -0.16,-11.27 -0.01,-4.29 -0.62,-7.06 2.32,-9.23 4.34,-3.19 14.62,-2.37 20.5,-2.41 -0.48,-23.02 1.16,-19.67 -6.46,-19.83 -7.47,-0.16 -16.98,-0.35 -23.55,2.24 -16.15,6.36 -9.01,23.82 -11.08,40.51z"/>
+                       </g>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-footer__right">
+                <div class="footer-contacts">
+                  <span class="footer-contacts__phone">8 (495) 204-13-22</span>
+                  <a href="#" class="btn btn--main">Обратный звонок</a>
+                  <ul class="footer-contacts__list">
+                    <li><a href="#">Мы на карте</a></li>
+                    <li><a href="#">Написать директору</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
