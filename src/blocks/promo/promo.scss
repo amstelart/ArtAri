@@ -31,10 +31,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    width: 100px;
-    height: 100px;
-    top: -30px;
-    right: -25px;
+    width: 68px;
+    height: 68px;
+    top: -16px;
+    right: -10px;
+    @media (min-width: $screen-lg) {
+      top: -30px;
+      right: -25px;
+      width: 100px;
+      height: 100px;
+    }
     @media (min-width: $screen-xxl) {
       width: 145px;
       height: 145px;

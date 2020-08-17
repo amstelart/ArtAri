@@ -10,7 +10,7 @@
 
   &__item {
     @include col();
-    @include col(xl, 6);
+    @include col(sm, 6);
     margin-bottom: 30px;
     &:nth-last-child(-n+2) {
       margin-bottom: 0;

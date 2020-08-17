@@ -14,7 +14,11 @@ $text-color:                  hsl(0, 0%, 10%) !default;
   padding: 0;
   list-style: none;
   margin: $line-height 0;
-  font-size: 16px;
+  font-size: 14px;
+
+  @media (min-width: $screen-xl) {
+    font-size: 16px;
+  }
 
   @media (min-width: $screen-xxl) {
     font-size: 23px;

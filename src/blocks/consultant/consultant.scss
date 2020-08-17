@@ -12,11 +12,17 @@
 
   &__part-video {
     @include col();
+    @include col(lg, 5);
     @include col(xl, 6);
   }
   &__part-form {
     @include col();
+    @include col(lg, 7);
     @include col(xl, 6);
+
+    @media (max-width: ($screen-lg - 1)) {
+      display: none;
+    }
   }
   &__form-wrap {
     @include row;
@@ -43,6 +49,6 @@
   }
   &__form-col {
     @include col();
-    @include col(xl, 6);
+    @include col(lg, 6);
   }
 }

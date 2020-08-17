@@ -127,4 +127,24 @@ $line-height:                 1.375em !default;
   &__help-text {
     @include field-help-text;
   }
+
+  &--inline {
+    display: flex;
+    flex-wrap: wrap;
+
+    #{$block-name}__input-wrap {
+
+      margin-top: 0;
+      margin-bottom: 10px;
+      @media (min-width: $screen-lg) {
+        margin-bottom: 20px;
+      }
+    }
+    #{$block-name}__name {
+      margin-right: 20px;
+      @media (min-width: $screen-xxl) {
+        margin-right: 40px;
+      }
+    }
+  }
 }

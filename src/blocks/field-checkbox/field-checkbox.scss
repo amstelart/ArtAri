@@ -32,8 +32,12 @@ $line-height:                 1.375em !default;
     font-weight: 400;
     line-height: $line-height;
     padding-left: 25px;
-    line-height: 22px;
-    font-size: 16px;
+    line-height: 20px;
+    font-size: 14px;
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+      line-height: 22px;
+    }
     @media (min-width: $screen-xxl) {
       padding-left: 55px;
       line-height: 42px;

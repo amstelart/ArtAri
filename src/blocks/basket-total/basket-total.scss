@@ -1,0 +1,96 @@
+// В этом файле должны быть стили для БЭМ-блока basket-total, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.basket-total {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border-top: 2px solid #949494;
+  border-bottom: 2px solid #949494;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-lg) {
+    flex-direction: row;
+    padding: 35px 0;
+  }
+
+  &__head,
+  &__part {
+    flex-grow: 1;
+    padding: 0 10px;
+    @media (min-width: $screen-lg) {
+      padding: 0 50px;
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #3b3b3b;
+
+      @media (min-width: $screen-xxl) {
+        font-size: 38px;
+      }
+    }
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+    }
+  }
+  &__part {
+    display: flex;
+    align-items: center;
+    @media (min-width: $screen-lg) {
+      text-align: center;
+      flex-direction: column;
+    }
+
+    &.payment-result {
+      #{$block-name}__part-title {
+        color: #3a3939;
+        font-weight: bold;
+      }
+      #{$block-name}__part-sum {
+        color: #e31e24;
+        font-weight: bold;
+      }
+    } 
+  }
+  &__part-title {
+    color: #626262;
+    line-height: 1.1;
+    font-size: 14px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    @media (min-width: $screen-lg) {
+      max-width: 280px;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+  }
+  &__part-sum {
+    font-size: 18px;
+    line-height: 1.1;
+    color: #3a3939;
+    flex-shrink: 0;
+    white-space: nowrap;
+    @media (min-width: $screen-xl) {
+      font-size: 22px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 42px;
+    }
+  }
+}

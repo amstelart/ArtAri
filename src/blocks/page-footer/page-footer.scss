@@ -8,21 +8,26 @@
 
   color: #fff;
   position: relative;
-  background-color: #080103;
-  background-image: url(../img/footer-bg.png);
-  background-size: contain;
-  background-position: left center;
-  background-repeat: no-repeat;
+  background-color: #2d2d2d;
+  
+  @media (min-width: $screen-lg) {
+    background-color: #080103;
+    background-image: url(../img/footer-bg.png);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
 
-  &:before {
-    content: "";
-    background-color: rgba(#080103, 0.9);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    &:before {
+      content: "";
+      background-color: rgba(#080103, 0.9);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
+
   
   .container {
     position: relative;
@@ -69,7 +74,17 @@
         @include col(lg, 4);
 
         &:last-child {
-          margin-top: 60px;
+          margin-top: 44px;
+          @media (min-width: $screen-xl) {
+            margin-top: 55px;
+          }
+        }
+
+        .footer-title {
+          font-size: 1.2em;
+          @media (min-width: $screen-xl) {
+            font-size: 1.5em;
+          }
         }
       }
 
@@ -84,11 +99,14 @@
         a {
           color: #fff;
           text-decoration: none;
-          font-size: 18px;
+          font-size: 14px;
 
           &:hover,
           &:focus {
             color: $color-main;
+          }
+          @media (min-width: $screen-xl) {
+            font-size: 18px;
           }
         }
       }
@@ -97,9 +115,16 @@
 
   .footer-caption {
     flex-basis: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
+    padding-right: 25px;
     p {
-      font-size: 18px;
+      font-size: 14px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 30px;
+      p {
+        font-size: 18px;
+      }
     }
   }
   &__contacts {
@@ -110,17 +135,88 @@
     padding: 20px 0;
     border-top: 2px solid rgba(#fff, 0.2);
   }
+
+  // мобильный футер
+  &__inner-mobile {
+    padding: 35px 0 40px;
+
+    .logo {
+      margin: 0 20px 25px 20px;
+    }
+    .copyright-text {
+      font-size: 16px;
+    }
+  }
+  &__row-mobile {
+    @include row;
+  }
+  &__left {
+    @include col();
+    @include col(sm, 5);
+  }
+  &__right {
+    @include col();
+    @include col(sm, 7);
+  }
 }
 
 
 // добавочные для футера (разбить на отдельные блоки)
 
 .footer-contacts {
+  
   &__phone {
     font-weight: bold;
+    white-space: nowrap;
     line-height: 1;
-    font-size: 26px;
+    font-size: 22px;
     display: inline-block;
     margin-bottom: 10px;
+    @media (min-width: $screen-xxl) {
+      font-size: 26px;
+    }
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 22px;
+      padding: 5px 0;
+      margin-left: 15px;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAiCAYAAABfqvm9AAAAxUlEQVRIie2WMQoCMRRE3y6iougRBEv7vYCexIuoN7C2khXtrW08xmLpNtaCpeKXaCIRJEGylWQgISHDy59uEhHZAkOqUa6A4kBdgcK614GBw1/WPHPdgbN1b/pyGOAaWAaEbgOL50leylTywJWLyDHVP9wCpvtQ+oM3AiMwAiMwAiPwP4CdClgNtZlucwB2AbAWMAZOvrKkdAGmQBeYWPXlm0pTRVyaWRVl5fG+q4hLff2YAD2PV1TkOTDyGPc6cuZ0weYBf9GwKmglzCcAAAAASUVORK5CYII=');
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding-left: 30px;
+      background-size: contain;
+      white-space: nowrap;
+    }
   }
+  .btn {
+    display: block;
+    @media (max-width:($screen-lg - 1)) {
+      margin-left: 15px;
+    }
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0 0;
+
+    li {
+      border-top: 1px solid #acacac;
+    }
+    a {
+      color: #fff;
+      font-size: 26px;
+      font-weight: bold;
+      text-decoration: none;
+      display: block;
+      padding: 20px 15px;
+
+      @media (max-width:($screen-md - 1)) {
+        font-size: 3.8vw;
+        padding: 0.8em 15px;
+      }
+    }
+  }
+
+  // @media (max-width: ($screen-lg - 1)) {
+  //   margin-bottom: 40px;
+  // }
 }

@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока chart, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.chart {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #2d2d2d;
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+  }
+  &__box {
+    display: flex;
+    padding: 10px 0;
+  }
+  &__box-item {
+    width: 35px;
+    height: 27px;
+    border: 1px solid #9d9e9e;
+    margin-left: -1px;
+    &.active {
+      background-color: $color-main;
+    }
+    &:first-child {
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+    &:last-child {
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+    @media (min-width: $screen-xxl) {
+      width: 45px;
+      height: 37px;
+    }
+  }
+}

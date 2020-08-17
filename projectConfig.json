@@ -81,7 +81,18 @@
     "nice-select": [],
     "question-table": [],
     "contact-box": [],
-    "contact-gallery": []
+    "contact-gallery": [],
+    "chart": [],
+    "info-class": [],
+    "basket-code": [],
+    "basket-item": [],
+    "basket-total": [],
+    "basket-сheckout": [],
+    "field-num": [],
+    "star-rating-svg": [],
+    "social": [],
+    "mobile-call": [],
+    "category-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -106,7 +117,8 @@
     "./node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js",
     "./node_modules/swipejs/build/swipe.min.js",
-    "./node_modules/object-fit-images/dist/ofi.js"
+    "./node_modules/object-fit-images/dist/ofi.js",
+    "./src/js/jquery.star-rating-svg.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

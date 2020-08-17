@@ -19,43 +19,81 @@
 
   &__inner {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    @media (max-width: ($screen-lg - 1)) {
+      flex-wrap: wrap;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    @media (min-width: $screen-lg) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   .logo {
     flex-shrink: 0;
+
+    @media (max-width: ($screen-lg - 1)) {
+      order: 1;
+      margin-left: 10px;
+    }
   }
 
   &__search {
     flex-grow: 1;
     text-align: center;
     margin-right: 20px;
+    max-width: 300px;
     .call-phone {
       font-size: 18px;
       font-weight: bold;
       white-space: nowrap;
       line-height: 1.1;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
       @media (min-width: $screen-xxl) {
         font-size: 26px;
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
       }
     }
     .call-link {
       font-size: 14px;
       text-decoration: underline;
-      color: inherit;
-
-      @media (min-width: $screen-xxl) {
-        font-size: 17px;
-      }
-    
+      color: inherit;      
       &:hover,
       &:focus {
         color: $red;
         text-decoration: none;
       }
+      @media (min-width: $screen-xxl) {
+        font-size: 17px;
+      }
+      @media (min-width: $screen-xxl) {
+        max-width: 490px;
+        margin-right: 3%;
+      }
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
     }
     .search {
       margin: 5px 0;
+      
       @media (min-width: $screen-xxl) {
         margin: 10px 0;
       }
@@ -65,6 +103,12 @@
       max-width: 490px;
       margin-right: 3%;
     }
+    @media (max-width: ($screen-lg - 1)) {
+      order: 3;
+      max-width: 100%;
+      flex-basis: 100%;
+      margin: 0;
+    }
   }
 
   &__schedule {
@@ -72,12 +116,15 @@
     line-height: 1.2;
     font-size: 12px;
     margin-right: 3%;
-    @media (min-width: $screen-xxl) {
-      font-size: 18px;
-    }
     span {
       display: block;
       white-space: nowrap;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 18px;
+    }
+    @media (max-width: ($screen-lg - 1)) {
+      display: none;
     }
   }
 
@@ -87,6 +134,12 @@
 
     .btn {
       display: flex;
+
+      padding: 8px 12px;
+
+      @media (min-width: $screen-xxl) {
+        padding: 0.5em 0.8em;
+      }
 
       &:not(:last-child) {
 
@@ -98,8 +151,12 @@
       }
 
       svg {
+        width: 25px;
+        height: 25px;
         @media (min-width: $screen-xxl) {
           margin-right: 10px;
+          width: 30px;
+          height: 30px;
         }
       }
 
@@ -116,6 +173,9 @@
 
     @media (min-width: $screen-xxl) {
       margin-right: 3%;
+    }
+    @media (max-width: ($screen-lg - 1)) {
+      display: none;
     }
   }
 
@@ -140,6 +200,16 @@
         max-width: 140px;
         font-size: 25px;
       }
+    }
+    @media (max-width: ($screen-lg - 1)) {
+      order: 2;
+    }
+  }
+
+  &__mobile-top {
+    display: none;
+    @media (max-width: ($screen-lg - 1)) {
+      display: block;
     }
   }
 }

@@ -46,6 +46,10 @@ $field-padding-horizontal:    0.7em !default;
     position: relative;
     flex-grow: 1;
 
+    @media (max-width: ($screen-lg - 1)) {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: 10px;
     }

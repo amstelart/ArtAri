@@ -9,7 +9,11 @@
   border-radius: 9px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 15.52px 0.48px rgba(74, 74, 74, 0.1);
-  padding: 30px;
+  padding: 20px;
+
+  @media (min-width: $screen-xxl) {
+    padding: 30px;
+  }
 
   &__inner {
     @include row;
@@ -25,25 +29,46 @@
   }
   &__title {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 40px;
+    }
   }
   &__list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 30px 0;
     li {
-      margin-bottom: 35px;
-      font-size: 18px;
+      margin-bottom: 15px;
+      font-size: 16px;
       position: relative;
-      padding-left: 70px;
-      padding-top: 5px;
+      padding-left: 30px;
+      padding-top: 2px;
 
       svg {
         position: absolute;
         top: 0;
         left: 0;
         fill: $color-main;
+        width: 20px;
+        height: 20px;
       }
+      @media (min-width: $screen-lg) {
+        padding-left: 47px;
+        padding-top: 5px;
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      @media (min-width: $screen-xxl) {
+        font-size: 18px;
+        margin-bottom: 35px;
+        padding-left: 70px;
+      }
+    }
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
     }
   }
 }

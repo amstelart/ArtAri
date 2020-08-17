@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока info-class, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.info-class {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+  margin-bottom: 35px;
+
+  &__chart {
+    @include col();
+    @include col(xl, 4);
+    @include col(xxl, 3);
+  }
+  &__caption {
+    @include col();
+    @include col(xl, 8);
+    @include col(xxl, 9);
+  }
+}

@@ -18,6 +18,335 @@
 
       <main role="main">
 
+        <section class="fw-layout">
+          <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+            <h1>Моя корзина</h1>
+            <div class="basket-code">
+              <div class="basket-code__caption">Номер дисконтной карты, подарочный сертификат или промокод</div>
+              <form action="" class="basket-code__wrap">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="" id="" name="">
+                  </span>
+                </label>
+                <button class="btn btn--main" type="submit">Войти</button>
+              </form>
+            </div>
+            <div class="basket-items-list">
+              <div class="basket-item">
+                <div class="basket-item__card">
+                  <div class="basket-item__head">Товар</div>
+                  <div class="basket-item__product">
+                    <div class="basket-item__img-wrap">
+                      <div class="basket-item__img">
+                        <img src="img/product-img-350_227.png" alt="">
+                      </div>
+                    </div>
+                    <div class="basket-item__descriptions">
+                      <div class="basket-item__title"><a href="#">Велосипед Десна 2611 V V010 (2018)</a></div>
+                      <div class="basket-item__vendorcode">арт. 1117360</div>
+                      <div class="basket-item__color-select">
+                        <div class="field-select">
+                          <div class="field-select__name">Указать цвет / размер:</div>
+                          <select class="wide">
+                            <option data-display="19 Жертый">19 Желтый</option>
+                            <option value="1">19 Желтый</option>
+                            <option value="2">19 Желтый</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="basket-item__rassrochka"><i>Товар доступен для покупки в рассрочку</i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basket-item__price">
+                  <div class="basket-item__head">Цена за 1 шт.</div>
+                  <div class="basket-item__price-current">13 190 ₽</div>
+                </div>
+                <div class="basket-item__amount">
+                  <div class="basket-item__head">Количество</div>
+                  <div class="field-num">
+                    <span class="field-num__input-wrap">
+                      <span class="field-num__input-and-btns">
+                        <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                        <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                        <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="basket-item__price">
+                  <div class="basket-item__head">Общая стоимость</div>
+                  <div class="basket-item__price-current">13 190 ₽</div>
+                </div>
+                <div class="basket-item__remove">
+                  <span class="close" aria-label="Закрыть"><span></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="basket-total">
+              <div class="basket-total__head">
+                <span>Мой заказ:</span>
+              </div>
+              <div class="basket-total__part">
+                <div class="basket-total__part-title">Стоимость товаров (без учёта доставки):</div>
+                <div class="basket-total__part-sum">15 300 ₽</div>
+              </div>
+              <div class="basket-total__part">
+                <div class="basket-total__part-title">Экономия:</div>
+                <div class="basket-total__part-sum">2 110 ₽</div>
+              </div>
+              <div class="basket-total__part">
+                <div class="basket-total__part-title">Списано бонусами:</div>
+                <div class="basket-total__part-sum">0 ₽</div>
+              </div>
+              <div class="basket-total__part payment-result">
+                <div class="basket-total__part-title">Итого к оплате:</div>
+                <div class="basket-total__part-sum">13 190 ₽</div>
+              </div>
+            </div>
+            <section class="section">
+              <div class="section__head">
+                <h2 class="section__title light center">Аксессуары</h2>
+              </div>
+              <div id="owl-carousel-demo-2" class="owl-carousel">
+                @@include('blocks/dop-card/dop-card.html')
+                @@include('blocks/dop-card/dop-card.html')
+                @@include('blocks/dop-card/dop-card.html')
+                @@include('blocks/dop-card/dop-card.html')
+              </div>
+            </section>
+            <form action="" class="basket-сheckout">
+              <h2>Оформление заказа</h2>
+              <div class="basket-сheckout__part">
+                <h3>Доставка</h3>
+                <div class="field-radio field-radio--inline">
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
+                      <span class="field-radio__name-text">Доставка по Москве и МКАД </span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Доставка за МКАД </span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Доставка по России</span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Самовывоз из магазина</span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Пункты самовывоза</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="basket-сheckout__deli">
+                  <p>Стоимость доставки вашего заказа <b>0 руб.</b> (в пределах МКАД)</p>
+                  <p>Общая стоимость заказа: <b>13 190 руб.</b></p>
+                </div>
+              </div>
+              <div class="basket-сheckout__part">
+                <h3>Информация о покупателе</h3>
+                <div class="basket-сheckout__user">
+                  <div class="basket-сheckout__user-col">
+                    <h4>Физическое лицо:</h4>
+                    <div class="basket-сheckout__user-fields">
+                      <label class="field-text">
+                        <span class="field-text__name">ФИО*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">E-mail*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Мобильный телефон*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Дополнительный телефон</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Размер рамы/рост</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Адрес*</span>
+                        <span class="field-text__input-wrap">
+                          <textarea class="field-text__input" placeholder=""></textarea>
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Пожелания</span>
+                        <span class="field-text__input-wrap">
+                          <textarea class="field-text__input" placeholder=""></textarea>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="basket-сheckout__user-col">
+                    <h4>Юридическое лицо:</h4>
+                    <div class="basket-сheckout__user-fields">
+                      <label class="field-text">
+                        <span class="field-text__name">Организация*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">E-mail*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Мобильный телефон*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Дополнительный телефон</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Адрес юридический*</span>
+                        <span class="field-text__input-wrap">
+                          <textarea class="field-text__input" placeholder=""></textarea>
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Адрес фактический*</span>
+                        <span class="field-text__input-wrap">
+                          <textarea class="field-text__input" placeholder=""></textarea>
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">ИНН/КПП*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">БИК*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Расчетный счет*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Корр счет*</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Пожелания</span>
+                        <span class="field-text__input-wrap">
+                          <textarea class="field-text__input" placeholder=""></textarea>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket-сheckout__part">
+                <h3>Способ оплаты</h3>
+                <div class="field-radio">
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
+                      <span class="field-radio__name-text">Оплата наличными при получении </span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Оплата банковской картой при получении </span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Предоплата в банке по счету для физ или юр лиц (Возможна комиссия банка)</span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Оформление заявки через Тинькофф Кредит</span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Предоплата по карте на сайте (комиссия 0%)</span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Предоплата электронными деньгами (комиссия 0%)</span>
+                    </label>
+                  </div>
+                  <div class="field-radio__input-wrap">
+                    <label class="field-radio__name">
+                      <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                      <span class="field-radio__name-text">Оплатить частями. Рассрочка без % до 6 мес. (комиссия 0%)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="basket-сheckout__action">
+                <div class="action-info">
+                  <p>Нажатием кнопки "Оформить заказ" Вы подтверждаете свое согласие с <a href="#">Договором оферты</a> и даете своё согласие на обработку своих 
+                    персональных данных на условиях, определенных <a href="#">Политикой конфиденциальности</a>.</p>
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                        <span class="field-checkbox__name-text">Запомнить мои персональные данные в этом браузере (в Cookie). Позволит в дальнейшем не вбивать вам ваши данные в корзине заказа.</span>
+                      </label>
+                    </div>
+                </div>
+                <div class="action-btn-wrap">
+                  <button class="btn btn--main">Оформить заказ</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        
         <section class="section">
           <div class="container">
             <div class="section__head">

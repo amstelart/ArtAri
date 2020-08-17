@@ -94,23 +94,29 @@ img {
 .section-line-decor {
   &:before,
   &:after {
-    content: "";
-    height: 3px;
-    width: 100%;
-    max-width: 312px;
-    background: #a0a0a0;
-    display: block;
-    margin: auto;
+    @media (min-width: $screen-lg) {
+      content: "";
+      height: 3px;
+      width: 100%;
+      max-width: 312px;
+      background: #a0a0a0;
+      display: block;
+      margin: auto;
+    }
   }
   &:before {
-    margin-bottom: 30px;
+    @media (min-width: $screen-lg) {
+      margin-bottom: 30px;
+    }
 
     @media (min-width: $screen-xxl) {
       margin-bottom: 90px;
     }
   }
   &:after {
-    margin-top: 30px;
+    @media (min-width: $screen-lg) {
+      margin-top: 30px;
+    }
 
     @media (min-width: $screen-xxl) {
       margin-top: 90px;
@@ -120,4 +126,16 @@ img {
 
 .container {
   @include container;
+}
+
+.mobile-hidden {
+  @media (max-width: ($screen-lg - 1)) {
+    display: none !important;
+  }
+}
+.mobile-show {
+  display: none;
+  @media (max-width: ($screen-lg - 1)) {
+    display: block !important;
+  }
 }

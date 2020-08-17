@@ -1,0 +1,217 @@
+// В этом файле должны быть стили для БЭМ-блока basket-сheckout, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.basket-сheckout {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  border-top: 4px solid $color-main;
+  padding: 15px 0;
+
+  @media (min-width: $screen-lg) {
+    padding: 45px 0;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 75px 0;
+  }
+
+  h2,h3,h4 {
+    font-family: Arial;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: normal;
+    @media (min-width: $screen-lg) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    color: #1f1f1f;
+    font-weight: bold;
+    @media (min-width: $screen-lg) {
+      font-size: 28px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 38px;
+    }
+  }
+
+  h3 {
+    color: #1f1f1f;
+    font-weight: 400;
+    font-size: 18px;
+    @media (min-width: $screen-lg) {
+      font-size: 26px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 37px;
+    }
+  }
+  h4 {
+    font-size: 16px;
+    color: #1f1f1f;
+    @media (min-width: $screen-lg) {
+      font-size: 20px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 33px;
+    }
+  }
+
+  .field-radio__name {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 25px;
+    color: #444444;
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+      line-height: 22px;
+      padding-left: 30px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+      line-height: 32px;
+      padding-left: 40px;
+    }
+  }
+  .field-radio__name-text:before {
+
+    @media (min-width: $screen-lg) {
+      width: 20px;
+      height: 20px;
+    }
+    @media (min-width: $screen-xxl) {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  &__part {
+    padding: 10px 0 15px;
+    @media (min-width: $screen-lg) {
+      padding: 10px 0 45px;
+    }
+  }
+  &__user {
+    @include row;
+  }
+  &__user-col {
+    @include col();
+    @include col(lg, 6);
+
+    &:first-child {
+      @media (min-width: $screen-lg) {
+        padding-right: 40px;
+        border-right: 2px solid #dcdcdc;
+      }
+      @media (min-width: $screen-xxl) {
+        padding-right: 90px;
+      }
+    }
+    &:last-child {
+      @media (min-width: $screen-lg) {
+        padding-left: 40px;
+      }
+      @media (min-width: $screen-xxl) {
+        padding-left: 90px;
+      }
+    }
+  }
+  &__deli {
+    background: #dcdcdc;
+    border-radius: 6px;
+    padding: 10px 15px;
+    p {
+      margin-bottom: 15px;
+      @media (max-width: ($screen-lg - 1)) {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: $screen-lg) {
+      margin: 0 35px;
+      padding: 20px 30px;
+    }
+    @media (min-width: $screen-xxl) {
+      margin: 0 65px;
+    }
+  }
+  &__user-fields {
+    .field-text {
+      display: flex;
+    }
+    .field-text__name {
+      flex-basis: 50%;
+      font-size: 14px;
+      font-weight: normal;
+      @media (min-width: $screen-xxl) {
+        font-size: 16px;
+      }
+
+      @media (min-width: $screen-xxl) {
+        font-size: 26px;
+      }
+    }
+    .field-text__input-wrap {
+      flex-basis: 50%;
+    }
+  }
+  &__action {
+    position: relative;
+    margin-top: 15px;
+
+    @media (min-width: $screen-xxl) {
+      margin-top: 45px;
+    }
+
+    .action-info {
+      border: 4px solid #dcdcdc;
+      border-radius: 6px;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      @media (min-width: $screen-lg) {
+        margin-bottom: 40px;
+      }
+      @media (min-width: $screen-xxl) {
+        margin-bottom: 90px;
+      }
+
+      p>a {
+        color: #156aa5;
+        text-decoration: none;
+      }
+    }
+    .action-btn-wrap {
+      text-align: center;
+    }
+    &:before {
+      content: "";
+      background-image: url('data:image/png;base64,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');
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      right: 25px;
+      top: -15px;
+
+      @media (min-width: $screen-xxl) {
+        width: 80px;
+        height: 80px;
+        right: 45px;
+        top: -35px;
+      }
+    }
+  }
+}

@@ -67,18 +67,25 @@
     color: #000;
     background: $color-main;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     position: relative;
 
+    svg {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+    }
     @media (min-width: $screen-xxl) {
       font-size: 24px;
       padding: 14px 28px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
     }
 
-    svg {
-      margin-right: 10px;
-    }
 
     &:before {
       content: "";

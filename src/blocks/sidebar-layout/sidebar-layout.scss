@@ -12,11 +12,11 @@
   &__col-sedebar {
     @include col();
     @include col(xl, 3);
-    @include col(xxl, 3);
+    @include col(lg, 3);
   }
   &__col-main {
     @include col();
     @include col(xl, 9);
-    @include col(xxl, 9);
+    @include col(lg, 9);
   }
 }

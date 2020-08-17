@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока mobile-call, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.mobile-call {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: #e43a28;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 4%;
+
+  &__inner {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  &__icon {
+    width: 31px;
+    height: 52px;
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAA0CAYAAAByxePMAAABH0lEQVRYhe3YsWoCQRDG8b9iERA0SaOQKmBjb2/lE9gkqYMPkcYihS8QsBdEG9/BFxAMSCBFCIEEAqkEhYDCyMItynKFN3B3zXxwxSy385tbrtqCiNwDA+CS7PIFPDp8DVQyhH3mJQW8ADYx6w3gJkGfq1JC2OUd+ItZrybEcccuJ/UW2CsGOjfulAvRu6/IMV03R8pPXUTeInFZjKb4AWYpfrHPLzD2hcfTPOow2xDPJYYbbrjhhhtuuOGGG2644YYbbrjh+eOa+zhtyiHuLu+6GcA14MEXuV4ChsddjtkQlx3wAqyADnCnGkV06QU3lUNFl6X2b58E9VTTRIvfBnVTi38r9o1OwDbwrOjx6f72FvAEXCsa/AMXin0fQP8A3JYJHfRxUb4AAAAASUVORK5CYII=');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__phone {
+    font-size: 29px;
+    line-height: 1.1;
+    font-weight: bold;
+  }
+  &__link {
+    font-size: 19px;
+    line-height: 1.1;
+    text-decoration: underline;
+    color: #fff;
+  }
+}

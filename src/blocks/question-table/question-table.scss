@@ -10,31 +10,64 @@
   margin-bottom: 60px;
 
   th {
-    font-size: 23px;
+    font-size: 16px;
     font-weight: 700;
-    padding: 0 20px 35px 0;
+    padding: 0 10px 15px 0;
     &:first-child {
       text-align: left;
+    }
+    @media (min-width: $screen-lg) {
+      font-size: 14px;
+      padding: 0 6px 10px 0;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 23px;
+      padding: 0 20px 15px 0;
     }
   }
 
   td {
     text-align: center;
-    font-size: 25px;
+    font-size: 16px;
     white-space: nowrap;
-    padding: 10px 0;
+    padding: 6px 0;
+    &:before {
+      padding-bottom: 6px;
+    }
     &:not(:first-child) {
       padding: 8px 15px;
+    }
+    @media (min-width: $screen-lg) {
+      font-size: 14px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 25px;
+      padding: 10px 0;
+      &:not(:first-child) {
+        padding: 4px 10px;
+      }
     }
   }
 
   &__qu {
     display: block;
     background: #fff;
-    border-radius: 9px;
+    border-radius: 0;
     border: 1px solid #dcdcdc;
-    font-size: 18px;
-    padding: 16px 20px;
+    font-size: 16px;
+    padding: 10px 16px;
     text-align: left;
+    white-space: normal;
+    text-align: center;
+    @media (min-width: $screen-lg) {
+      font-size: 13px;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    @media (min-width: $screen-xxl) {
+      border-radius: 9px;
+      font-size: 18px;
+      padding: 16px 20px;
+    }
   }
 }

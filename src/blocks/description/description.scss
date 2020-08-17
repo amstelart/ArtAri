@@ -12,10 +12,12 @@
   &__col-l {
     @include col();
     @include col(xl, 7);
+    @include col(lg, 6);
   }
   &__col-r {
     @include col();
     @include col(xl, 5);
+    @include col(lg, 6);
   }
   &__list {
     list-style: none;
@@ -36,8 +38,12 @@
       }
 
       span {
-        max-width: 50%;
-        flex-basis: 50%;
+        // max-width: 50%;
+        // flex-basis: 50%;
+        @media (min-width: $screen-xl) {
+          max-width: 50%;
+          flex-basis: 50%;
+        }
       }
     }
   }
