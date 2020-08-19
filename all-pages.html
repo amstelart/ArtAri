@@ -1,4 +1,34 @@
-<!DOCTYPE html><html lang="ru"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Список страниц</title>    <style>        ul {            list-style: none;            padding: 0;            margin: 20px;            font-size: 18px;            font-family: Arial, Helvetica, sans-serif;        }        ul li {            margin-bottom: 10px;        }        ul li a {            color: #000;            text-decoration: none;            font-weight: 500;        }    </style><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<!DOCTYPE html><html lang="ru"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Список страниц</title>    <!--DEV Такой комментарий не попадет в собранный HTML
+    <meta name="viewport" content="width=1000">
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.min.css" rel="stylesheet" media="screen">
+    <script>
+      // Маркер работающего javascript
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      document.addEventListener('DOMContentLoaded', function(){
+        if (window.isMobile !== undefined) {
+          // console.log(isMobile);
+          if(isMobile.any) {
+            var rootClasses = ' is-mobile';
+            for (key in isMobile) {
+              if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+              if(typeof isMobile[key] === 'object' && key !== 'other') {
+                for (type in isMobile[key]) {
+                  if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+                }
+              }
+            }
+            document.documentElement.className += rootClasses;
+          }
+        }
+        else {
+          console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+        }
+      });
+    </script>
+    <style>        ul {            list-style: none;            padding: 0;            margin: 20px;            font-size: 18px;            font-family: Arial, Helvetica, sans-serif;        }        ul li {            margin-bottom: 10px;        }        ul li a {            color: #000;            text-decoration: none;            font-weight: 500;        }    </style><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/site.webmanifest">
@@ -7,4 +37,68 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head><body>    <ul>        <li><a href="index.html" target="_blank">Главная</a></li>        <li><a href="page-category.html" target="_blank">Раздел</a></li>        <li><a href="page-product.html" target="_blank">Карточка товара</a></li>        <li><a href="page-basket.html" target="_blank">Корзина</a></li>        <li><a href="page-contacts.html" target="_blank">Контакты</a></li>        <li><a href="page-favorites.html" target="_blank">Избранное</a></li>        <li><a href="page-guarantee.html" target="_blank">Гарантия и ремонт</a></li>        <li><a href="page-info.html" target="_blank">Покупателям</a></li>    </ul></body></html>
+<meta name="theme-color" content="#ffffff"></head><body>    <ul>        <li><a href="index.html" target="_blank">Главная</a></li>        <li><a href="page-category.html" target="_blank">Раздел</a></li>        <li><a href="page-product.html" target="_blank">Карточка товара</a></li>        <li><a href="page-basket.html" target="_blank">Корзина</a></li>        <li><a href="page-contacts.html" target="_blank">Контакты</a></li>        <li><a href="page-favorites.html" target="_blank">Избранное</a></li>        <li><a href="page-guarantee.html" target="_blank">Гарантия и ремонт</a></li>        <li><a href="page-info.html" target="_blank">Покупателям</a></li>        <li><span data-toggle="modal" data-target="#modal-request">Модальное окно (заявка)</span></li>    </ul>    <!--DEV
+    Для использования этого файла как шаблона:
+    @ @include('blocks/modal/modal.html')
+    (Нужно убрать пробел между символами @)
+    Подробнее: https://www.npmjs.com/package/gulp-file-include
+    <div id="modal-demo" class="modal" tabindex="-1" role="dialog">
+      <div class="modal__dialog" role="document">
+        <div class="modal__content">
+          <div class="modal__header">
+            <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+            <h4 class="modal__title">Modal</h4>
+          </div>
+          <div class="modal__body">
+            <p>Далеко-далеко за словесными горами...</p>
+          </div>
+          <div class="modal__footer">
+            <button type="button" class="btn" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+    <div id="modal-request" class="modal" tabindex="-1" role="dialog">
+      <div class="modal__dialog" role="document">
+        <div class="modal__content">
+          <div class="modal__request">
+            <div class="modal__request-img" style="background-image: url(img/request-img.jpg);"></div>
+            <div class="modal__request-body">
+              <div class="modal__request__head">
+                <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+                <div class="modal__request__title">Звонок бесплатный!</div>
+                <div class="modal__request__phone">8 (495) 204-13-22</div>
+              </div>
+              <form action class="modal__form">
+                <p class="modal__form-text">Или отправьте заявку и мы вам перезвоним</p>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше имя" id name>
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваш номер телефона" id name>
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button class="btn btn--red" type="submit">Отправить заявку</button>
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id name checked>
+                      <span class="field-checkbox__name-text">Соглашаюсь с</span> <a href="#">политикой конфиденциальности</a>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    <!--DEV Такой комментарий не попадет в собранный HTML
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+    -->
+    <script src="js/script.min.js"></script>
+</body></html>

@@ -182,7 +182,7 @@
             <div class="mobile-call__inner">
               <span class="mobile-call__icon"></span>
               <div class="mobile-call__phone">8 (495) 204-13-22</div>
-              <a href="#" class="mobile-call__link">Заказать обратный звонок</a>
+              <span data-toggle="modal" data-target="#modal-request" class="mobile-call__link">Заказать обратный звонок</span>
             </div>
           </div>
         </div>
@@ -240,7 +240,7 @@
                   <input class="search__input" type="search">
                   <button class="search__btn"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-search"/></svg></button>
                 </form>
-                <a href="#" class="call-link">Заказать обратный звонок</a>
+                <span data-toggle="modal" data-target="#modal-request" class="call-link">Заказать обратный звонок</span>
               </div>
               <div class="page-header__schedule">
                 <span>График работы: 9:00-21:00</span>
@@ -672,6 +672,9 @@
                 -->
                 <div class="dop-card">
                   <div class="dop-card__img-wrap">
+                    <div class="like js-choose">
+                      <svg class="icon" width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-heart"/></svg>
+                    </div>
                     <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
                   </div>
                   <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
@@ -686,6 +689,9 @@
                 -->
                 <div class="dop-card">
                   <div class="dop-card__img-wrap">
+                    <div class="like js-choose">
+                      <svg class="icon" width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-heart"/></svg>
+                    </div>
                     <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
                   </div>
                   <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
@@ -700,6 +706,9 @@
                 -->
                 <div class="dop-card">
                   <div class="dop-card__img-wrap">
+                    <div class="like js-choose">
+                      <svg class="icon" width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-heart"/></svg>
+                    </div>
                     <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
                   </div>
                   <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
@@ -714,6 +723,9 @@
                 -->
                 <div class="dop-card">
                   <div class="dop-card__img-wrap">
+                    <div class="like js-choose">
+                      <svg class="icon" width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-heart"/></svg>
+                    </div>
                     <img src="img/dop-img-396_289.jpg" alt class="dop-card__img">
                   </div>
                   <div class="dop-card__title">Велокресло детское заднее Bobike "Go carrier"</div>
@@ -940,7 +952,66 @@
           </div>
         </div>
       </footer>
-    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML
+    </div>  </div>  <!--DEV
+  Для использования этого файла как шаблона:
+  @ @include('blocks/modal/modal.html')
+  (Нужно убрать пробел между символами @)
+  Подробнее: https://www.npmjs.com/package/gulp-file-include
+  <div id="modal-demo" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h4 class="modal__title">Modal</h4>
+        </div>
+        <div class="modal__body">
+          <p>Далеко-далеко за словесными горами...</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+  <div id="modal-request" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__request">
+          <div class="modal__request-img" style="background-image: url(img/request-img.jpg);"></div>
+          <div class="modal__request-body">
+            <div class="modal__request__head">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <div class="modal__request__title">Звонок бесплатный!</div>
+              <div class="modal__request__phone">8 (495) 204-13-22</div>
+            </div>
+            <form action class="modal__form">
+              <p class="modal__form-text">Или отправьте заявку и мы вам перезвоним</p>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Ваше имя" id name>
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Ваш номер телефона" id name>
+                </span>
+              </label>
+              <div class="field-actions">
+                <button class="btn btn--red" type="submit">Отправить заявку</button>
+                <div class="field-checkbox">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id name checked>
+                    <span class="field-checkbox__name-text">Соглашаюсь с</span> <a href="#">политикой конфиденциальности</a>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!--DEV Такой комментарий не попадет в собранный HTML
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
   -->
