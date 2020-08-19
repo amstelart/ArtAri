@@ -21,6 +21,9 @@
     display: block;
     position: relative;
     width: 110px;
+    @media (max-width: ($screen-sm - 1)) {
+      width: 100px;
+    }
   }
 
   &__input {

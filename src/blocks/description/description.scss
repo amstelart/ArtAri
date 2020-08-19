@@ -28,9 +28,17 @@
       background: #f2f2f2;
       display: flex;
       font-size: 14px;
-      margin-bottom: 7px;
-      padding: 3px 8px;
+      margin-bottom: 5px;
+      padding: 3px 5px;
+      @media (max-width: ($screen-sm - 1)) {
+        flex-direction: column;
+      }
 
+      @media (min-width: $screen-lg) {
+        font-size: 14px;
+        margin-bottom: 7px;
+        padding: 3px 8px;
+      }
       @media (min-width: $screen-xxl) {
         font-size: 25px;
         margin-bottom: 13px;
@@ -40,6 +48,13 @@
       span {
         // max-width: 50%;
         // flex-basis: 50%;
+        &:first-child {
+          white-space: nowrap;
+          margin-right: 4px;
+          @media (max-width: ($screen-sm - 1)) {
+            font-weight: bold;
+          }
+        }
         @media (min-width: $screen-xl) {
           max-width: 50%;
           flex-basis: 50%;

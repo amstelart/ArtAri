@@ -24,6 +24,9 @@
     border-bottom: 2px solid #949494;
     padding: 9px 0;
     margin-bottom: 10px;
+    @media (max-width: ($screen-sm - 1)) {
+      font-size: 12px;
+    }
     @media (min-width: $screen-xl) {
       font-size: 16px;
       margin-bottom: 30px;
