@@ -77,7 +77,6 @@
     "catalog": [],
     "sorting": [],
     "promo": [],
-    "view-nav": [],
     "nice-select": [],
     "question-table": [],
     "contact-box": [],
@@ -92,15 +91,18 @@
     "star-rating-svg": [],
     "social": [],
     "mobile-call": [],
-    "category-list": []
+    "category-list": [],
+    "reviews": [],
+    "dop-cards": [],
+    "availability": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
     "../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
-    "../../node_modules/jquery-nice-select/css/nice-select.css"
+    "../../node_modules/jquery-nice-select/css/nice-select.css",
+    "../../node_modules/hc-offcanvas-nav/dist/hc-offcanvas-nav.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
@@ -118,7 +120,8 @@
     "./node_modules/owl.carousel/dist/owl.carousel.js",
     "./node_modules/swipejs/build/swipe.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
-    "./src/js/jquery.star-rating-svg.min.js"
+    "./src/js/jquery.star-rating-svg.min.js",
+    "./node_modules/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

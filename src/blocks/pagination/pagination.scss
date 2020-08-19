@@ -16,25 +16,30 @@ $border-color:                hsl(0, 0%, 60%) !default;
   flex-wrap: wrap;
   margin-top: $line-height;
   margin-bottom: $line-height;
-  padding: 20px;
+  padding: 10px;
   border-radius: 6px;
   background: #e8e8e8;
 
+  @media (min-width: $screen-xxl) {
+    padding: 20px;
+  }
+
   &__item {
     display: block;
-    padding: 0.5em;
+    padding: 0.3em;
     min-width: 2em;
     // border: 1px solid $border-color;
     border-radius: 50%;
     text-decoration: none;
     text-align: center;
     color: $text-color;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     margin: 0 3px;
 
     @media (min-width: $screen-xxl) {
       font-size: 25px;
+      padding: 0.5em;
     }
 
     &.prev,

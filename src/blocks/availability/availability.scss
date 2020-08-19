@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока availability, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.availability {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    max-width: 60%;
+  }
+
+  &__list-item {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    .part-title {
+      margin-right: auto;
+    }
+    .part-val {}
+  }
+  &__faq {
+    a {
+      color: #2d2d2d;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}

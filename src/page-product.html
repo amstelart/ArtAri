@@ -130,6 +130,7 @@
                 </li>
               </ul>
               <div class="tabs__content-wrapper">
+                <!-- спецификации -->
                 <div class="tabs__content-item tabs__content-item--active" id="demo-tab-01" role="tabpanel">
                   <div class="info-class">
                     <div class="info-class__chart">
@@ -199,14 +200,173 @@
                   <p class="light-gray-text"><i>Описания товаров на сайте не являются публичной офертой, т.к. заявленные производителем спецификации иногда не соответствуют
                     фактическим. Если вы обнаружили несоответствие, сообщите нам.</i></p>
                 </div>
+                <!-- Отзывы -->
                 <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
-                  222
+                  <div class="reviews">
+                    <div class="reviews__wrapper">
+                      <div class="reviews__col-list">
+                        <div class="reviews__list">
+                          <div class="reviews__item">
+                            <div class="reviews__item-head">
+                              <div class="reviews__item-head-top">
+                                <div class="reviews__item-name">Василиса</div>
+                                <div class="reviews__item-date">20.05.2020</div>
+                                <div class="reviews__item-star-rating">
+                                  <div class="product-rating" data-rating="4"></div>
+                                </div>
+                              </div>
+                              <div class="reviews__item-head-bottom">
+                                <div class="reviews__item-text-rating">покупкой довольна</div>
+                              </div>
+                            </div>
+                            <div class="reviews__item-text">
+                              <p>Отличный велосипед, достойная цена, единственное в комплект не входят крылья. Была приятно удивлена быстрой доставкой и вежливому персоналу!</p>
+                            </div>
+                          </div>
+                          <div class="reviews__item">
+                            <div class="reviews__item-head">
+                              <div class="reviews__item-head-top">
+                                <div class="reviews__item-name">Василиса</div>
+                                <div class="reviews__item-date">20.05.2020</div>
+                                <div class="reviews__item-star-rating">
+                                  <div class="product-rating" data-rating="3.5"></div>
+                                </div>
+                              </div>
+                              <div class="reviews__item-head-bottom">
+                                <div class="reviews__item-text-rating">покупкой довольна</div>
+                              </div>
+                            </div>
+                            <div class="reviews__item-text">
+                              <p>Отличный велосипед, достойная цена, единственное в комплект не входят крылья. Была приятно удивлена быстрой доставкой и вежливому персоналу!</p>
+                            </div>
+                          </div>
+                          <div class="reviews__item">
+                            <div class="reviews__item-head">
+                              <div class="reviews__item-head-top">
+                                <div class="reviews__item-name">Василиса</div>
+                                <div class="reviews__item-date">20.05.2020</div>
+                                <div class="reviews__item-star-rating">
+                                  <div class="product-rating" data-rating="4.5"></div>
+                                </div>
+                              </div>
+                              <div class="reviews__item-head-bottom">
+                                <div class="reviews__item-text-rating">покупкой довольна</div>
+                              </div>
+                            </div>
+                            <div class="reviews__item-text">
+                              <p>Отличный велосипед, достойная цена, единственное в комплект не входят крылья. Была приятно удивлена быстрой доставкой и вежливому персоналу!</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pagination reviews__pagination">
+                          <a href="" class="pagination__item prev">Назад</a>
+                          <a href="" class="pagination__item  pagination__item--active">1</a>
+                          <a href="" class="pagination__item">2</a>
+                          <a href="" class="pagination__item">3</a>
+                          <a href="" class="pagination__item next">Вперед</a>
+                        </div>
+                      </div>
+                      <div class="reviews__col-form">
+                        <form action="" class="reviews__form">
+                          <div class="field-select">
+                            <select class="">
+                              <option data-display="Оценка*">значение</option>
+                              <option value="1">значение</option>
+                              <option value="2">значение</option>
+                              <option value="3">значение</option>
+                              <option value="4">значение</option>
+                              <option value="5">значение</option>
+                            </select>
+                          </div>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" placeholder="Заголовок*" id="" name="">
+                            </span>
+                          </label>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" placeholder="Ваше имя*" id="" name="">
+                            </span>
+                          </label>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" placeholder="Email*" id="" name="">
+                            </span>
+                          </label>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <textarea class="field-text__input" placeholder="Отзыв*" rows="6"></textarea>
+                            </span>
+                          </label>
+                          <div class="field-action">
+                            <button class="btn btn--main">Отправить</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!-- Сопутствующие товары -->
                 <div class="tabs__content-item" id="demo-tab-03" role="tabpanel">
-                  333
+                  <div class="dop-cards">
+                    <div class="dop-cards__list">
+                      <div class="dop-cards__col">
+                        @@include('blocks/dop-card/dop-card.html')
+                      </div>
+                      <div class="dop-cards__col">
+                        @@include('blocks/dop-card/dop-card.html')
+                      </div>
+                      <div class="dop-cards__col">
+                        @@include('blocks/dop-card/dop-card.html')
+                      </div>
+                      <div class="dop-cards__col">
+                        @@include('blocks/dop-card/dop-card.html')
+                      </div>
+                      <div class="dop-cards__col">
+                        @@include('blocks/dop-card/dop-card.html')
+                      </div>
+                      <div class="dop-cards__col">
+                        @@include('blocks/dop-card/dop-card.html')
+                      </div>
+                      <div class="dop-cards__col">
+                        @@include('blocks/dop-card/dop-card.html')
+                      </div>
+                      <div class="dop-cards__col">
+                        @@include('blocks/dop-card/dop-card.html')
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!-- Цвета и размеры в наличии -->
                 <div class="tabs__content-item" id="demo-tab-04" role="tabpanel">
-                  444
+                  <div class="availability">
+                    <div class="availability__list">
+                      <div class="availability__list-item">
+                        <div class="part-title">
+                          <div>Размер рамы / ростовка (в дюймах)</div>
+                        </div>
+                        <div class="part-val">21</div>
+                      </div>
+                      <div class="availability__list-item">
+                        <div class="part-title">
+                          <div>Сейчас в наличии в магазине</div>
+                          <div>(Москва, Ул. Подольских Курсантов д3 стр8)</div>
+                        </div>
+                        <div class="part-val">21</div>
+                      </div>
+                      <div class="availability__list-item">
+                        <div class="part-title">
+                          <div>В наличии на нашем складе</div>
+                          <div>(Срок доставки 1-2 дня)</div>
+                        </div>
+                        <div class="part-val">21</div>
+                      </div>
+                    </div>
+                    <div class="availability__faq">
+                      <p><a href="#">Как выбрать размер?</a></p>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/BikeFrameMtb.png/300px-BikeFrameMtb.png" alt="">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -218,7 +378,7 @@
             <div class="section__head">
               <h2 class="section__title light">Похожие модели</h2>
             </div>
-            <div id="owl-carousel-demo-3" class="owl-carousel">
+            <div id="owl-carousel-demo-3" class="owl-carousel owl-theme">
               @@include('blocks/product-card/product-card.html')
               @@include('blocks/product-card/product-card.html')
               @@include('blocks/product-card/product-card.html')
@@ -255,6 +415,7 @@
     </div>
   </div>
 
+  @@include('blocks/modal/modal.html')
   @@include('_include/page_bottom.html')
 </body>
 </html>

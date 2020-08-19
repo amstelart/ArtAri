@@ -1,6 +1,18 @@
 // Если на проекте jQuery
 $( document ).ready(function() {
 
+  $('#mobile-nav').hcOffcanvasNav({
+    disableAt: 992,
+    disableAt: false,
+    // customToggle: $toggle,
+    levelSpacing: 40,
+    navTitle: 'All Categories',
+    levelTitles: true,
+    levelTitleAsBack: true,
+    pushContent: '#container',
+    insertClose: 2
+  });
+
   $('select').niceSelect();
 
   $(".product-rating").starRating({
@@ -24,7 +36,7 @@ $( document ).ready(function() {
     slideSpeed : 2000,
     nav: false,
     autoplay: false,
-    dots: true,
+    dots: false,
     loop: true,
     responsiveRefreshRate : 200,
     navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>','<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
@@ -36,8 +48,8 @@ $( document ).ready(function() {
     })
     .owlCarousel({
     items : slidesPerPage,
-    dots: true,
-    nav: true,
+    dots: false,
+    nav: false,
     smartSpeed: 200,
     slideSpeed : 500,
     slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
@@ -95,10 +107,12 @@ $( document ).ready(function() {
 
   $("#owl-carousel-demo").owlCarousel({
     items: 3,
-    nav: false,
-    loop: false,
+    nav: true,
+    loop: true,
+    dots: false,
     margin: 15,
     center: false,
+    navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>','<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
     responsive : {
       0 : {
         items: 1,
@@ -125,10 +139,12 @@ $( document ).ready(function() {
   });
   $("#owl-carousel-demo-2").owlCarousel({
     items: 3,
-    nav: false,
-    loop: false,
+    nav: true,
+    dots: false,
+    loop: true,
     margin: 15,
     center: false,
+    navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 2px;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>','<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 2px;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
     responsive : {
       0 : {
         items: 1,
@@ -155,22 +171,27 @@ $( document ).ready(function() {
   });
   $("#owl-carousel-demo-3").owlCarousel({
     items: 3,
-    nav: false,
+    nav: true,
+    dots: false,
     loop: false,
     margin: 20,
     center: false,
+    navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 2px;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>','<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 2px;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
     responsive : {
       0 : {
         items: 1,
         nav: true,
+        stagePadding: 60,
         loop: true,
         center: true,
       },
       480 : {
         items: 1,
+        stagePadding: 60,
       },
       768 : {
         items: 1,
+        stagePadding: 60,
       },
       992 : {
         items: 4,
@@ -256,6 +277,30 @@ $( document ).ready(function() {
 
   });
   // end range-slider
+  	// SWITCHERS
+		// dropdown
+		$('.js-drop-toggle').click(function(){
+			var parent = $(this).closest(".js-drop-wrap");
+			var current = parent.find(".js-drop-cont");
+			current.slideToggle();
+			parent.toggleClass("active")
+		});
+		// dropdown === end
+
+		// choose
+		$('.js-choose').click(function () {
+			$(this).toggleClass('active');
+		});
+		// choose === end
+
+		// choose-group
+		$('.js-choose-group-el').click(function () {
+			$(this).closest(".js-choose-group").find(".js-choose-group-el").removeClass("active");
+			$(this).addClass('active');
+		});
+		// choose-group === end
+
+	// SWITCHERS === end
 });
 
 // Изоляция без jQuery

@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    position: relative;
 
     // мобильный вид списка
     @media (max-width: ($menu-desktop-width - 1)) {
@@ -40,7 +41,6 @@
   }
 
   &__item {
-    position: relative;
     flex-grow: 1;
     margin: 0 7px;
 
@@ -71,6 +71,26 @@
     font-weight: bold;
     position: relative;
 
+    #{$block-name}__item--show-child > &,
+    #{$block-name}__item:hover & {
+      &:before {
+        contain: "";
+        background: #fff;
+        height: 17px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-left: 2px solid #e8e8e8;
+        border-right: 2px solid #e8e8e8;
+        z-index: 2;
+        @media (min-width: $screen-xxl) {
+          height: 32px;
+        }
+      }
+    }
+
     svg {
       margin-right: 10px;
       width: 20px;
@@ -88,6 +108,9 @@
 
 
     &:before {
+      content: "";
+    }
+    &:after {
       content: "";
       width: 14px;
       height: 8px;
@@ -134,6 +157,7 @@
         position: absolute;
         top: 100%;
         left: 0;
+        right: 0;
         z-index: 1;
         opacity: 0;
         height: 0;
@@ -146,51 +170,68 @@
           opacity: 1;
           height: auto;
           overflow: visible;
-        }
-        // stylelint-enable
-      }
-    }
+          padding-top: 15px;
 
-    &--lvl-3 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 100%;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item--lvl-2:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
+          @media (min-width: $screen-xxl) {
+            padding-top: 30px;
+          }
         }
         // stylelint-enable
       }
     }
   }
+  &__sublist-container {
+    padding: 20px;
+    min-height: 240px;
+    background: #fff;
+    border: 2px solid #e8e8e8;
 
-
-
-  // переключатель
-
-  &__toggler {
-    display: inline-block;
-    padding: 0;
-    background: none;
-    border: none;
-
-    .no-js & {
-      display: none;
+    @media (min-width: $screen-xxl) {
+      min-height: 300px;
     }
-
-    @media (min-width: $menu-desktop-width) {
-      display: none;
+  }
+  &__sublist-row {
+    @include row;
+  }
+  &__sublist-col-cat {
+    @include col();
+    @include col(lg, 3);
+  }
+  &__sublist-col-brand {
+    @include col();
+    @include col(lg, 9);
+  }
+  &__sublist-col {
+    @include col();
+    @include col(lg, 3);
+  }
+  &__sublist-head {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f1f1f;
+    margin-bottom: 15px;
+    @media (min-width: $screen-xxl) {
+      font-size: 27px;
+    }
+  }
+  &__sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 6px;
+    }
+    a {
+      font-size: 14px;
+      color: #1f1f1f;
+      text-decoration: none;
+      display: block;
+      &:hover {
+        color: #e43a28;
+      }
+      @media (min-width: $screen-xxl) {
+        font-size: 18px;
+      }
     }
   }
 }

@@ -19,9 +19,7 @@
     align-items: center;
     background: #dcdcdc;
     padding: 10px 15px;
-    flex-grow: 1;
-    // justify-content: space-between;
-    
+    flex-grow: 1;    
 
     @media (min-width: $screen-xxl) {
       padding: 20px 30px;
@@ -36,6 +34,10 @@
     font-weight: 700;
     margin: 10px 15px 10px 0;
 
+    @media (max-width: ($screen-xl - 1)) {
+      display: none;
+    }
+
     @media (min-width: $screen-xxl) {
       font-size: 17px;
     }
@@ -43,10 +45,11 @@
   &__part-inner {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
 
-    .field-checkbox {
+    .field-checkbox,
+    .field-select {
       margin-bottom: 0;
+      margin-right: 10px;
     }
     .field-checkbox__name {
       @media (min-width: $screen-xxl) {
@@ -65,9 +68,6 @@
           height: 26px;
         }
       }
-    }
-    .field-select {
-      margin-bottom: 0;
     }
   }
 }

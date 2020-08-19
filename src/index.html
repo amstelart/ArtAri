@@ -78,7 +78,52 @@
               <div class="category-list__item">
                 <a href="#" class="category-card">
                   <div class="category-card__img-wrap">
+                    <img src="img/category-img-sale.png" alt="" class="category-card__img">
+                    <div class="category-card__reserve">35 в наличии</div>
+                  </div>
+                  <div class="category-card__title">Скидки</div>
+                </a>
+              </div>
+              <div class="category-list__item">
+                <a href="#" class="category-card">
+                  <div class="category-card__img-wrap">
                     <img src="img/category-img-07.png" alt="" class="category-card__img">
+                    <div class="category-card__reserve">35 в наличии</div>
+                  </div>
+                  <div class="category-card__title">Трюковые</div>
+                </a>
+              </div>
+              <div class="category-list__item">
+                <a href="#" class="category-card">
+                  <div class="category-card__img-wrap">
+                    <img src="img/category-img-08.png" alt="" class="category-card__img">
+                    <div class="category-card__reserve">35 в наличии</div>
+                  </div>
+                  <div class="category-card__title">Для взрослых</div>
+                </a>
+              </div>
+              <div class="category-list__item">
+                <a href="#" class="category-card">
+                  <div class="category-card__img-wrap">
+                    <img src="img/category-img-09.png" alt="" class="category-card__img">
+                    <div class="category-card__reserve">35 в наличии</div>
+                  </div>
+                  <div class="category-card__title">Для подростков</div>
+                </a>
+              </div>
+              <div class="category-list__item">
+                <a href="#" class="category-card">
+                  <div class="category-card__img-wrap">
+                    <img src="img/category-img-10.png" alt="" class="category-card__img">
+                    <div class="category-card__reserve">35 в наличии</div>
+                  </div>
+                  <div class="category-card__title">Для детей</div>
+                </a>
+              </div>
+              <div class="category-list__item">
+                <a href="#" class="category-card">
+                  <div class="category-card__img-wrap">
+                    <img src="img/category-img-sale.png" alt="" class="category-card__img">
                     <div class="category-card__reserve">35 в наличии</div>
                   </div>
                   <div class="category-card__title">Скидки</div>
@@ -164,7 +209,8 @@
             <div class="section__head">
               <h2 class="section__title light center">Аксессуары</h2>
             </div>
-            <div id="owl-carousel-demo-2" class="owl-carousel">
+            <div id="owl-carousel-demo-2" class="owl-carousel owl-theme">
+              @@include('blocks/dop-card/dop-card.html')
               @@include('blocks/dop-card/dop-card.html')
               @@include('blocks/dop-card/dop-card.html')
               @@include('blocks/dop-card/dop-card.html')
@@ -177,7 +223,7 @@
             <div class="section__head">
               <h2 class="section__title">Распродажа велосипедов 2019</h2>
             </div>
-            <div id="owl-carousel-demo-3" class="owl-carousel">
+            <div id="owl-carousel-demo-3" class="owl-carousel owl-theme">
               @@include('blocks/product-card/product-card.html')
               @@include('blocks/product-card/product-card.html')
               @@include('blocks/product-card/product-card.html')
@@ -215,6 +261,7 @@
 
   </div>
 
+  @@include('blocks/modal/modal.html')
   @@include('_include/page_bottom.html')
 </body>
 </html>

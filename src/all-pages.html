@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Список страниц</title>
+    @@include('_include/page_head.html')
     <style>
         ul {
             list-style: none;
@@ -32,6 +33,10 @@
         <li><a href="page-favorites.html" target="_blank">Избранное</a></li>
         <li><a href="page-guarantee.html" target="_blank">Гарантия и ремонт</a></li>
         <li><a href="page-info.html" target="_blank">Покупателям</a></li>
+        <li><span data-toggle="modal" data-target="#modal-request">Модальное окно (заявка)</span></li>
+        <li><span data-toggle="modal" data-target="#modal-product">Модальное окно (товар)</span></li>
     </ul>
+    @@include('blocks/modal/modal.html')
+    @@include('_include/page_bottom.html')
 </body>
 </html>
