@@ -370,3 +370,16 @@ img {
 .hc-offcanvas-nav:not(.touch-device) li:not(.custom-content) a:hover {
   background: darken(#212020, 2%);
 }
+
+.product-carousel {
+  .owl-stage-outer {
+    padding-bottom: 80px;
+
+    @media (min-width: $screen-xxl) {
+      padding-bottom: 95px;
+    }
+  }
+}
+.section.product-carousel-section {
+  padding-bottom: 5px;
+}
